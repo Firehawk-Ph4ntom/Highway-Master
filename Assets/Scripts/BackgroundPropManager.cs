@@ -13,14 +13,11 @@ public class BackgroundPropManager : MonoBehaviour
     public float minSpawnDelay = 0.4f;
     public float maxSpawnDelay = 1.2f;
 
-    public float leftMinX = -4.5f;
-    public float leftMaxX = -3.2f;
+    public float leftMinX = -5.5f;
+    public float leftMaxX = -8.5f;
 
-    public float rightMinX = 3.2f;
-    public float rightMaxX = 4.5f;
-
-    public float minScale = 0.8f;
-    public float maxScale = 1.2f;
+    public float rightMinX = 5.5f;
+    public float rightMaxX = 8.5f;
 
     private GameManager gameManager;
 
@@ -58,11 +55,7 @@ public class BackgroundPropManager : MonoBehaviour
             : Random.Range(rightMinX, rightMaxX);
 
         Vector3 spawnPosition = new Vector3(xPosition, spawnY, 0.0f);
-
         GameObject propObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
-
-        float randomScale = Random.Range(minScale, maxScale);
-        propObject.transform.localScale = new Vector3(randomScale, randomScale, 1.0f);
 
         BackgroundProp prop = propObject.GetComponent<BackgroundProp>();
 

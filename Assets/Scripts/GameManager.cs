@@ -4,47 +4,34 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
-
     public TextMeshProUGUI scoreText;
-
     private int score = 0;
     public bool gameOver = false;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
 
     private void Start()
     {
         score = 0;
         gameOver = false;
-        UpdateScoreText();
+        scoreText.text = "Score: 0";
     }
 
     public void AddScore()
     {
-        if (gameOver)
-            return;
-
-        score++;
-        UpdateScoreText();
-    }
-
-    private void UpdateScoreText()
-    {
-        if (scoreText != null)
+        if (!gameOver)
+        {
+            score++;
             scoreText.text = "Score: " + score;
+        }
     }
 
+    // Set the Final Score to the Current Score, then load the Game Over Scene, which then calls Final Score
     public void GameOver()
     {
-        if (gameOver)
-            return;
+        if (!gameOver) {
 
-        gameOver = true;
-        PlayerPrefs.SetInt("FinalScore", score);
-        SceneManager.LoadScene("GameOverScene");
+            gameOver = true;
+            PlayerPrefs.SetInt("FinalScore", score);
+            SceneManager.LoadScene("GameOverScene");
+        }
     }
 }

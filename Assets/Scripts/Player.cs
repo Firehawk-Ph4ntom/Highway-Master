@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+// Serializable class to hold the Obstacle Prefab data
 [System.Serializable]
 public class ObstacleSpawnData
 {
@@ -10,8 +11,6 @@ public class ObstacleSpawnData
 
 public class Player : MonoBehaviour
 {
-    private GameManager gameManager;
-
     public float laneMoveSpeed = 8.0f;
     public float[] lanePositions = { -2.8f, 0f, 2.8f };
 
@@ -21,62 +20,42 @@ public class Player : MonoBehaviour
     public float worldSpeed = 5.0f;
 
     public ObstacleSpawnData[] obstacleSpawnData;
-    public int minObstaclesPerWave = 1;
-    public int maxObstaclesPerWave = 3;
+    public int minObstaclesPerWave = 1, maxObstaclesPerWave = 2;
 
     public float initialSpawnDelay = 2.0f;
-    public float minSpawnInterval = 1.0f;
-    public float maxSpawnInterval = 3.0f;
+    public float minSpawnInterval = 1.0f, maxSpawnInterval = 3.0f;
 
-    public float spawnOffset = 1.0f;
-    public float destroyOffset = 1.0f;
-
-    private float spawnY;
-    private float destroyY;
+    private float spawnY, destroyY;
+    public float spawnOffset = 1.0f, destroyOffset = 1.0f;
 
     private Coroutine spawnCoroutine;
 
     private void Start()
     {
-        gameManager = GameManager.Instance;
-        Camera cam = Camera.main;
+        float worldHeight = Camera.main.orthographicSize * 2.0f;
 
-        if (gameManager == null || cam == null)
-        {
-            Debug.LogError("Missing GameManager or Main Camera.");
-            enabled = false;
-            return;
-        }
+        float topYPosition = Camera.main.transform.position.y + worldHeight / 2.0f;
+        float bottomYPosition = Camera.main.transform.position.y - worldHeight / 2.0f;
 
-        float worldHeight = cam.orthographicSize * 2.0f;
-
-        float topEdge = cam.transform.position.y + worldHeight / 2.0f;
-        float bottomEdge = cam.transform.position.y - worldHeight / 2.0f;
-
-        spawnY = topEdge + spawnOffset;
-        destroyY = bottomEdge - destroyOffset;
+        spawnY = topYPosition + spawnOffset;
+        destroyY = bottomYPosition - destroyOffset;
 
         currentLane = Mathf.Clamp(currentLane, 0, lanePositions.Length - 1);
 
-        transform.position = new Vector3(
-            lanePositions[currentLane],
-            transform.position.y,
-            transform.position.z
-        );
+        transform.position = new Vector3(lanePositions[currentLane], transform.position.y, transform.position.z);
 
         spawnCoroutine = StartCoroutine(SpawnRoutine());
     }
 
     private void Update()
     {
-        if (gameManager.gameOver)
-            return;
-
-        MovePlayer();
+        if (!FindFirstObjectByType<GameManager>().gameOver)
+            MovePlayer();
     }
 
     private void MovePlayer()
     {
+        // Player can only move Left or Right
         if (!isMovingLane)
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
@@ -88,45 +67,40 @@ public class Player : MonoBehaviour
             currentLane = Mathf.Clamp(currentLane, 0, lanePositions.Length - 1);
         }
 
-        Vector3 targetPosition = new Vector3(
-            lanePositions[currentLane],
-            transform.position.y,
-            transform.position.z
-        );
+        // Player movement is clamped to Lane positions set
+        Vector3 targetPosition = new Vector3(lanePositions[currentLane], transform.position.y, transform.position.z);
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, laneMoveSpeed * Time.deltaTime);
 
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            targetPosition,
-            laneMoveSpeed * Time.deltaTime
-        );
-
+        // The player movement can only be changed when the player is not currently moving to a Lane already
         isMovingLane = Mathf.Abs(transform.position.x - targetPosition.x) > 0.01f;
     }
 
+    // Subroutine that handles Obstacle wave spawning based on delays set
     private IEnumerator SpawnRoutine()
     {
         yield return new WaitForSeconds(initialSpawnDelay);
 
-        while (!gameManager.gameOver)
+        while (!FindFirstObjectByType<GameManager>().gameOver)
         {
             SpawnWave();
-
             float delay = Random.Range(minSpawnInterval, maxSpawnInterval);
             yield return new WaitForSeconds(delay);
         }
     }
 
+    // Each wave, a random Lane is selected for Object spawning
     private void SpawnWave()
     {
-        if (obstacleSpawnData == null || obstacleSpawnData.Length == 0 || lanePositions.Length == 0)
-            return;
-
+        // pick a random Lane to spawn obstacles on
         int safeLane = Random.Range(0, lanePositions.Length);
         int obstacleCount = GetObstacleCount();
 
+        // If a Lane has already been selected for spawning, or if it's the safe lane,
+        // then skip it if not all Obstacles have been spawned yet
         bool[] usedLanes = new bool[lanePositions.Length];
         usedLanes[safeLane] = true;
 
+        // Spawn Obstacles until the count is reached, checking for used Lanes and Safe Lanes (Where the Player can actually dodge)
         for (int spawned = 0; spawned < obstacleCount;)
         {
             int laneIndex = Random.Range(0, lanePositions.Length);
@@ -140,56 +114,64 @@ public class Player : MonoBehaviour
         }
     }
 
+    // Minimum of 1 Obstacle, maximum of 2, and always have a Safe Lane for the Player to dodge through
     private int GetObstacleCount()
     {
         int count = Random.Range(minObstaclesPerWave, maxObstaclesPerWave + 1);
         return Mathf.Clamp(count, 1, lanePositions.Length - 1);
     }
 
+    // Obstacles spawn in outside the World Border, which then move downwards on the Y-axis
+    // If the Obstacle passes the destroyY point (which is outside the world border from the Player's side),
+    // Destroy the Object
     private void SpawnObstacleAt(float xPosition)
     {
+        // Pick a Weight first before spawning
         GameObject prefab = PickWeightedObstacle();
-
-        if (prefab == null)
-            return;
 
         Vector3 spawnPosition = new Vector3(xPosition, spawnY, 0.0f);
         GameObject obstacleObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
 
         Obstacle obstacle = obstacleObject.GetComponent<Obstacle>();
 
-        if (obstacle == null)
-            return;
-
         obstacle.SetSpeed(worldSpeed);
         obstacle.destroyY = destroyY;
     }
 
+    // Weighted system, allowing objects to be prioritized based on a number assigned
+    // which the higher the number, the likelier it is to spawn compared to the other Objects
     private GameObject PickWeightedObstacle()
     {
+        // Get total spawn weight
         float totalWeight = GetTotalSpawnWeight();
 
+        // If no weight set, then won't spawn anything
         if (totalWeight <= 0.0f)
             return null;
 
+        // Randomized interval between 0 and total weight, which then a range is created for each Object
+        // If the range falls within the random value, then that Object spawns
         float randomValue = Random.Range(0.0f, totalWeight);
 
         for (int i = 0; i < obstacleSpawnData.Length; i++)
         {
             ObstacleSpawnData data = obstacleSpawnData[i];
 
-            if (data.prefab == null || data.spawnWeight <= 0.0f)
+            // If Object weight is 0, then it shouldn't spawn at all
+            if (data.spawnWeight <= 0.0f)
                 continue;
 
+            // The range calculation
             randomValue -= data.spawnWeight;
 
             if (randomValue <= 0.0f)
                 return data.prefab;
         }
-
         return null;
     }
 
+    // Based on the Inspector, the total weight is calculated by just iterating through the numbers
+    // of all the object prefabs and summing them up, which is then used for the weighted randomization
     private float GetTotalSpawnWeight()
     {
         float totalWeight = 0.0f;
@@ -198,31 +180,23 @@ public class Player : MonoBehaviour
         {
             ObstacleSpawnData data = obstacleSpawnData[i];
 
-            if (data.prefab != null && data.spawnWeight > 0.0f)
+            if (data.spawnWeight > 0.0f)
                 totalWeight += data.spawnWeight;
         }
 
         return totalWeight;
     }
 
-    public void StopSpawning()
-    {
-        if (spawnCoroutine == null)
-            return;
-
-        StopCoroutine(spawnCoroutine);
-        spawnCoroutine = null;
-    }
-
+    // Collision Trigger Detection between a Player and an Obstacle
     private void OnTriggerEnter2D(Collider2D collidee)
     {
-        if (gameManager == null || gameManager.gameOver)
-            return;
+        if (!FindFirstObjectByType<GameManager>().gameOver) {
 
-        if (collidee.CompareTag("Obstacle"))
-        {
-            StopSpawning();
-            gameManager.GameOver();
+            if (collidee.CompareTag("Obstacle"))
+            {
+                StopCoroutine(spawnCoroutine);
+                FindFirstObjectByType<GameManager>().GameOver();
+            }
         }
     }
 }

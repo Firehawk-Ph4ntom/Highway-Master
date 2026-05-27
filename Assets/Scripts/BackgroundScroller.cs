@@ -5,27 +5,18 @@ public class BackgroundScroller : MonoBehaviour
     public float scrollSpeed = 5.0f;
     public float startY, resetY;
 
-    private GameManager gameManager;
-
-    private void Start()
-    {
-        gameManager = GameManager.Instance;
-    }
-
     private void Update()
     {
-        if (gameManager == null || gameManager.gameOver)
-            return;
-
-        transform.Translate(Vector2.down * scrollSpeed * Time.deltaTime, Space.World);
-
-        if (transform.position.y <= resetY)
+        if (!FindFirstObjectByType<GameManager>().gameOver)
         {
-            transform.position = new Vector3(
-                transform.position.x,
-                startY,
-                transform.position.z
-            );
+            transform.Translate(Vector2.down * scrollSpeed * Time.deltaTime, Space.World);
+
+            if (transform.position.y <= resetY)
+            {
+                Vector3 position = transform.position;
+                position.y = startY;
+                transform.position = position;
+            }
         }
     }
 }

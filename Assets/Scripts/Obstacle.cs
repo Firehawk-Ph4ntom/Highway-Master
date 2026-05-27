@@ -3,57 +3,32 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public float destroyY;
-    public Sprite[] spriteVariants;
-
     private float obstacleSpeed;
-    private bool scored = false;
-
-    private GameManager gameManager;
+    public Sprite[] spriteVariants;
     private SpriteRenderer spriteRenderer;
-
     private void Start()
     {
-        gameManager = GameManager.Instance;
+        // Apply randomized Sprites to the Object Prefab instead of defining too many new Prefabs
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        ApplyRandomSprite();
+        spriteRenderer.sprite = spriteVariants[Random.Range(0, spriteVariants.Length)];
     }
 
     private void Update()
     {
-        if (gameManager == null || gameManager.gameOver)
-            return;
-
-        MoveDown();
-        CheckDestroyAndScore();
-    }
-
-    private void ApplyRandomSprite()
-    {
-        if (spriteRenderer == null || spriteVariants == null || spriteVariants.Length == 0)
-            return;
-
-        spriteRenderer.sprite = spriteVariants[Random.Range(0, spriteVariants.Length)];
-    }
-
-    private void MoveDown()
-    {
-        transform.Translate(Vector2.down * obstacleSpeed * Time.deltaTime, Space.World);
-    }
-
-    private void CheckDestroyAndScore()
-    {
-        if (scored)
-            return;
-
-        if (transform.position.y < destroyY)
+        // Obstacles move downward in the scene, and are destroyed on passing the destroyY threshold
+        if (!FindFirstObjectByType<GameManager>().gameOver)
         {
-            scored = true;
-            gameManager.AddScore();
-            Destroy(gameObject);
+            transform.Translate(Vector2.down * obstacleSpeed * Time.deltaTime, Space.World);
+
+            if (transform.position.y < destroyY)
+            {
+                FindFirstObjectByType<GameManager>().AddScore();
+                Destroy(gameObject);
+            }
         }
     }
 
+    // Referenced in Player class
     public void SetSpeed(float speed)
     {
         obstacleSpeed = speed;
