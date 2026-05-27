@@ -89,7 +89,8 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Each wave, a random Lane is selected for Object spawning
+    // Each wave, one random lane is selected as the safe lane,
+    // then obstacles are spawned in the remaining lanes
     private void SpawnWave()
     {
         // pick a random Lane to spawn obstacles on
@@ -106,16 +107,18 @@ public class Player : MonoBehaviour
         {
             int laneIndex = Random.Range(0, lanePositions.Length);
 
+            // If the index lands on the safe lane or on a used lane, don't spawn an Obstacle
             if (usedLanes[laneIndex])
                 continue;
 
+            // Set the lane to used
             usedLanes[laneIndex] = true;
             SpawnObstacleAt(lanePositions[laneIndex]);
             spawned++;
         }
     }
 
-    // Minimum of 1 Obstacle, maximum of 2, and always have a Safe Lane for the Player to dodge through
+    // Calculate the maximum amount of Obstacles to spawn, and always have a Safe Lane for the Player to dodge through
     private int GetObstacleCount()
     {
         int count = Random.Range(minObstaclesPerWave, maxObstaclesPerWave + 1);
@@ -148,8 +151,7 @@ public class Player : MonoBehaviour
         if (totalWeight <= 0.0f)
             return null;
 
-        // Randomized interval between 0 and total weight, which then a range is created for each Object
-        // If the range falls within the random value, then that Object spawns
+        // Randomized interval between 0 and total weight
         float randomValue = Random.Range(0.0f, totalWeight);
 
         for (int i = 0; i < obstacleSpawnData.Length; i++)
@@ -163,6 +165,7 @@ public class Player : MonoBehaviour
             // The range calculation
             randomValue -= data.spawnWeight;
 
+            // The Object that passes the negative check first will be the one that gets spawned
             if (randomValue <= 0.0f)
                 return data.prefab;
         }
