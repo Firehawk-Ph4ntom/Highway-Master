@@ -940,7 +940,7 @@ MonoBehaviour:
   - prefab: {fileID: 5072976128816218964, guid: 54818b42ed8bf35419ff0b0276ffc100, type: 3}
     spawnWeight: 2
   - prefab: {fileID: 6003723229909440145, guid: 44b6a524974762149be87f309f1a6519, type: 3}
-    spawnWeight: 99
+    spawnWeight: 1
   minObstaclesPerWave: 1
   maxObstaclesPerWave: 2
   initialSpawnDelay: 2

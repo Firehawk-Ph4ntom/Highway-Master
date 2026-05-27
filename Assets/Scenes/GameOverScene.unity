@@ -1354,7 +1354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameOverMenu
   finalScoreText: {fileID: 1249894972}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 2039804217}
   GameOver_Hole: {fileID: 21300000, guid: b795a85f9a9a5af4ea7ac49aa55c77ab, type: 3}
   GameOver_Barrel: {fileID: 21300000, guid: 5bb6177ac8623754fbc16a72c375c052, type: 3}
   GameOver_Crash: {fileID: 21300000, guid: 8f1880bf300f6b848a504a0abe1fa2b0, type: 3}
