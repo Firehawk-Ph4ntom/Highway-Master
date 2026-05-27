@@ -185,8 +185,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 3789676800
-  m_fontColor: {r: 0, g: 0.88235295, b: 0.88235295, a: 0.88235295}
+    rgba: 3784781824
+  m_fontColor: {r: 0, g: 0.1882353, b: 0.5921569, a: 0.88235295}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -360,7 +360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f674462288a14046a51af6206346f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundScroller
-  scrollSpeed: 5
   startY: 0
   resetY: -7
 --- !u!1 &651682537
@@ -467,7 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f674462288a14046a51af6206346f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundScroller
-  scrollSpeed: 5
   startY: 6
   resetY: 0
 --- !u!1 &787968522
@@ -574,7 +572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f674462288a14046a51af6206346f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundScroller
-  scrollSpeed: 5
   startY: 0
   resetY: -6.2
 --- !u!1 &1039075979
@@ -712,7 +709,6 @@ MonoBehaviour:
   - {fileID: 1153540006409888211, guid: 1176a87e77b9b0c48b1697e9c83c47b5, type: 3}
   - {fileID: 6395801200772569725, guid: bc64cd7672a19a240b3c56556248556d, type: 3}
   - {fileID: 6260704838558376721, guid: 438e76ac2d00a944c8c13496c5de7fef, type: 3}
-  scrollSpeed: 5
   spawnY: 7
   destroyY: -7
   minSpawnDelay: 0.4
@@ -840,7 +836,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f674462288a14046a51af6206346f71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundScroller
-  scrollSpeed: 5
   startY: 10
   resetY: 0
 --- !u!1 &1413964298
@@ -874,6 +869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   scoreText: {fileID: 366317037}
   gameOver: 0
+  worldSpeed: 10
 --- !u!4 &1413964300
 Transform:
   m_ObjectHideFlags: 0
@@ -926,7 +922,6 @@ MonoBehaviour:
   - -2.8
   - 0
   - 2.8
-  worldSpeed: 5
   obstacleSpawnData:
   - prefab: {fileID: 8824832986119816886, guid: 8e1123868891a8d4c8990f4ec7c5b07f, type: 3}
     spawnWeight: 20
@@ -947,10 +942,10 @@ MonoBehaviour:
   - prefab: {fileID: 6003723229909440145, guid: 44b6a524974762149be87f309f1a6519, type: 3}
     spawnWeight: 1
   minObstaclesPerWave: 1
-  maxObstaclesPerWave: 3
+  maxObstaclesPerWave: 2
   initialSpawnDelay: 2
   minSpawnInterval: 1
-  maxSpawnInterval: 3
+  maxSpawnInterval: 2
   spawnOffset: 1
   destroyOffset: 1
 --- !u!50 &1592689141

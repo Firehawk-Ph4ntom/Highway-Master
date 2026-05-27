@@ -17,6 +17,11 @@ public class GameOverMenu : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+
+    }
+
     // Reload the Game Scene
     public void Restart()
     {

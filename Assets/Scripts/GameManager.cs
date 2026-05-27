@@ -7,12 +7,18 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int score = 0;
     public bool gameOver = false;
+    public float worldSpeed = 10.0f;
 
     private void Start()
     {
         score = 0;
         gameOver = false;
-        scoreText.text = "Score: 0";
+        scoreText.text = "Score: " + score;
+    }
+
+    private void Update()
+    {
+
     }
 
     public void AddScore()
@@ -24,7 +30,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Set the Final Score to the Current Score, then load the Game Over Scene, which then calls Final Score
+    // Set the FinalScore to the Current Score, then load the Game Over Scene, which then calls FinalScore
     public void GameOver()
     {
         if (!gameOver) {

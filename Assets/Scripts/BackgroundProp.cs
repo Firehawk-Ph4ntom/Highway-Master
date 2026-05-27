@@ -2,22 +2,31 @@ using UnityEngine;
 
 public class BackgroundProp : MonoBehaviour
 {
-    private float moveSpeed;
-    private float destroyY;
+    public float destroyY;
 
-    public void Initialize(float speed, float destroyPositionY)
+    private void Start()
     {
-        moveSpeed = speed;
-        destroyY = destroyPositionY;
+
     }
 
     private void Update()
     {
-        transform.Translate(Vector2.down * moveSpeed * Time.deltaTime, Space.World);
-
-        if (transform.position.y <= destroyY)
+        // Props move downward in the scene, and are destroyed on passing the destroyY threshold
+        // Similar to Obstacle.cs
+        if (!FindFirstObjectByType<GameManager>().gameOver)
         {
-            Destroy(gameObject);
+            transform.Translate(Vector2.down * FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime, Space.World);
+
+            if (transform.position.y < destroyY)
+            {
+                Destroy(gameObject);
+            }
         }
+    }
+
+    // Referenced in BackgroundPropManager
+    public void Initialize(float destroyPositionY)
+    {
+        destroyY = destroyPositionY;
     }
 }

@@ -2,14 +2,18 @@ using UnityEngine;
 
 public class BackgroundScroller : MonoBehaviour
 {
-    public float scrollSpeed = 5.0f;
     public float startY, resetY;
+
+    private void Start()
+    {
+
+    }
 
     private void Update()
     {
         if (!FindFirstObjectByType<GameManager>().gameOver)
         {
-            transform.Translate(Vector2.down * scrollSpeed * Time.deltaTime, Space.World);
+            transform.Translate(Vector2.down * FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime, Space.World);
 
             if (transform.position.y <= resetY)
             {

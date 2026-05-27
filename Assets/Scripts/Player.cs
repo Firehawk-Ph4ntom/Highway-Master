@@ -17,13 +17,11 @@ public class Player : MonoBehaviour
     private int currentLane = 1;
     private bool isMovingLane = false;
 
-    public float worldSpeed = 5.0f;
-
     public ObstacleSpawnData[] obstacleSpawnData;
     public int minObstaclesPerWave = 1, maxObstaclesPerWave = 2;
 
     public float initialSpawnDelay = 2.0f;
-    public float minSpawnInterval = 1.0f, maxSpawnInterval = 3.0f;
+    public float minSpawnInterval = 1.0f, maxSpawnInterval = 2.0f;
 
     private float spawnY, destroyY;
     public float spawnOffset = 1.0f, destroyOffset = 1.0f;
@@ -32,6 +30,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
+        // Calculate the Camera bounds and set the spawnpoint and destroy point of the Obstacles used below
         float worldHeight = Camera.main.orthographicSize * 2.0f;
 
         float topYPosition = Camera.main.transform.position.y + worldHeight / 2.0f;
@@ -42,6 +41,7 @@ public class Player : MonoBehaviour
 
         currentLane = Mathf.Clamp(currentLane, 0, lanePositions.Length - 1);
 
+        // Obstacle spawn positions clamped to the lane position array
         transform.position = new Vector3(lanePositions[currentLane], transform.position.y, transform.position.z);
 
         spawnCoroutine = StartCoroutine(SpawnRoutine());
@@ -78,6 +78,7 @@ public class Player : MonoBehaviour
     // Subroutine that handles Obstacle wave spawning based on delays set
     private IEnumerator SpawnRoutine()
     {
+        // A bit of an initial delay before the first wave starts
         yield return new WaitForSeconds(initialSpawnDelay);
 
         while (!FindFirstObjectByType<GameManager>().gameOver)
@@ -133,8 +134,6 @@ public class Player : MonoBehaviour
         GameObject obstacleObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
 
         Obstacle obstacle = obstacleObject.GetComponent<Obstacle>();
-
-        obstacle.SetSpeed(worldSpeed);
         obstacle.destroyY = destroyY;
     }
 
