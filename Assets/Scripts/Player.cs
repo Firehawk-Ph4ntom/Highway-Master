@@ -191,11 +191,25 @@ public class Player : MonoBehaviour
     {
         if (!FindFirstObjectByType<GameManager>().gameOver) {
 
-            if (collidee.CompareTag("Obstacle"))
+            // Each Obstacle generates a different Crash Type, 
+            // which is then saved for different Game Over Menu UI Screens
+            if (collidee.CompareTag("HoleObstacle"))
             {
-                StopCoroutine(spawnCoroutine);
-                FindFirstObjectByType<GameManager>().GameOver();
+                PlayerPrefs.SetString("CrashType", "Hole");
             }
+            else if (collidee.CompareTag("BarrelObstacle"))
+            {
+                PlayerPrefs.SetString("CrashType", "Barrel");
+            }
+            else
+            {
+                PlayerPrefs.SetString("CrashType", "Vehicle");
+            }
+
+            // Then, stop Obstacle Spawning subroutine and trigger Game Over in the Game Manager
+            // The Game Over Screen will then change depending on the saved Player Prefs enum
+            StopCoroutine(spawnCoroutine);
+            FindFirstObjectByType<GameManager>().GameOver();
         }
     }
 }
