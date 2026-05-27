@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: -2071945372673701011}
   - component: {fileID: 4744378353774323953}
   - component: {fileID: 257992610548197647}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Jeep_B
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
