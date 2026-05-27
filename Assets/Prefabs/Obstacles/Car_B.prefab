@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1465873210246988559}
   - component: {fileID: -1717381344839931792}
   - component: {fileID: -2580765978712170830}
+  - component: {fileID: -8779453889987485402}
   m_Layer: 0
   m_Name: Car_B
   m_TagString: Untagged
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7975680495767670633}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-2580765978712170830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -164,5 +165,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.12, y: 7.69}
+  m_Size: {x: 3.25, y: 7}
   m_EdgeRadius: 0
+--- !u!114 &-8779453889987485402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7975680495767670633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d7d9816db5a04896447eb64d32ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyY: 0
+  spriteVariants:
+  - {fileID: 21300000, guid: d29091251628a8c4fba939b8fba15e8a, type: 3}
+  - {fileID: 21300000, guid: d390040177ba53848b01599bb23d2215, type: 3}
+  - {fileID: 21300000, guid: f82c4f918ecec88409c4fe26187afcaa, type: 3}
+  - {fileID: 21300000, guid: 5d675ce100702c340b6cc878a2a8aa79, type: 3}
+  - {fileID: 21300000, guid: e611423f9834efe4892db15ab4580fb0, type: 3}
+  - {fileID: 21300000, guid: 4c71ba892a9d1064886f3da0607de07a, type: 3}
+  - {fileID: 21300000, guid: 256b0547a2c84fb449925b6c19d16e78, type: 3}

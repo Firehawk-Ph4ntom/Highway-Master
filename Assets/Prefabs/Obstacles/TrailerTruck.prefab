@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4737207453229276683}
   - component: {fileID: -4078010970843707386}
   - component: {fileID: -518796291026620391}
+  - component: {fileID: -2164241520021280910}
   m_Layer: 0
   m_Name: TrailerTruck
   m_TagString: Untagged
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3904484536832859782}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-518796291026620391
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,5 +165,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.12, y: 8.38}
+  m_Size: {x: 2.5, y: 8}
   m_EdgeRadius: 0
+--- !u!114 &-2164241520021280910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904484536832859782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d7d9816db5a04896447eb64d32ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyY: 0
+  spriteVariants:
+  - {fileID: 21300000, guid: 48eb9ac7dc583d34a8b3ebb41bd30996, type: 3}
+  - {fileID: 21300000, guid: 78f7be3f79677e14b9ecd3a29a53c67c, type: 3}
+  - {fileID: 21300000, guid: 7d754758d60450e419401e0095e6fe2e, type: 3}
+  - {fileID: 21300000, guid: b6b73a00dda09324db32c5ca5bf4008d, type: 3}
+  - {fileID: 21300000, guid: 71dee610809be0c4085a78cd36d9d5fc, type: 3}
+  - {fileID: 21300000, guid: f8096c33b0657ca43b7a249e8c927b03, type: 3}
+  - {fileID: 21300000, guid: 349610acd25295340b5d1ad318c4784b, type: 3}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 140325862273482985}
   - component: {fileID: -8853470784484878750}
   - component: {fileID: -4053071069569507926}
+  - component: {fileID: 2019321949410554109}
   m_Layer: 0
   m_Name: HoleHazard
   m_TagString: Untagged
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5072976128816218964}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &-4053071069569507926
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -150,9 +151,29 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.56
+  m_Radius: 1.9
+--- !u!114 &2019321949410554109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5072976128816218964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d7d9816db5a04896447eb64d32ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyY: 0
+  spriteVariants:
+  - {fileID: 21300000, guid: 6d9a1d1b3064129429134a1abc892722, type: 3}
+  - {fileID: 21300000, guid: 7b3d388e1d40aa3448514775cca6adf3, type: 3}
+  - {fileID: 21300000, guid: 83d4ad95e49384e46889c1f361b50688, type: 3}
+  - {fileID: 21300000, guid: 5329163864344ff4885b136637350454, type: 3}
+  - {fileID: 21300000, guid: 8c92503624a33f94283b6e719e389b4a, type: 3}
+  - {fileID: 21300000, guid: fd4e0df4629320843977058c7b829d43, type: 3}

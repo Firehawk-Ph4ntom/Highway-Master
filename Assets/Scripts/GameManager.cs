@@ -5,13 +5,31 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
     public TextMeshProUGUI scoreText;
+
     private int score = 0;
     public bool gameOver = false;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        score = 0;
+        gameOver = false;
+        UpdateScoreText();
+    }
+
+    public void AddScore()
+    {
+        if (gameOver)
+            return;
+
+        score++;
+        UpdateScoreText();
     }
 
     private void UpdateScoreText()

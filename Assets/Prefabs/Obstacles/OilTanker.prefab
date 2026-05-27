@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4969149143317340442}
   - component: {fileID: 3295426686110951573}
   - component: {fileID: -8046328604959008284}
+  - component: {fileID: -7674079640774438939}
   m_Layer: 0
   m_Name: OilTanker
   m_TagString: Untagged
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706730761093982421}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-8046328604959008284
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -164,5 +165,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.77, y: 5.12}
+  m_Size: {x: 1.35, y: 4.6}
   m_EdgeRadius: 0
+--- !u!114 &-7674079640774438939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706730761093982421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d7d9816db5a04896447eb64d32ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyY: 0
+  spriteVariants:
+  - {fileID: 21300000, guid: ba41308d99cbdb2499029723342a4617, type: 3}
+  - {fileID: 21300000, guid: d90a34746e5e7a1418236a9be8de17d9, type: 3}
+  - {fileID: 21300000, guid: 641536aa7b428614d94e493e59ade9ac, type: 3}
+  - {fileID: 21300000, guid: 1eca2b4008f1ff84fb67b617693e7353, type: 3}
+  - {fileID: 21300000, guid: 6752b5019f648c7468abb6ab38469a07, type: 3}
+  - {fileID: 21300000, guid: d475eab8c4d29ce4d82798ef1dd5cf76, type: 3}
+  - {fileID: 21300000, guid: 5d5da4487fe6441458a0ef7d2fc4b47d, type: 3}

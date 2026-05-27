@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 38607170799955851}
   - component: {fileID: 506982597692647473}
   - component: {fileID: 8493353781320203395}
+  - component: {fileID: -6308254641008764338}
   m_Layer: 0
   m_Name: Jeep_A
   m_TagString: Untagged
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8118336777554989676}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8493353781320203395
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -164,5 +165,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 3.25, y: 7}
   m_EdgeRadius: 0
+--- !u!114 &-6308254641008764338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118336777554989676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d7d9816db5a04896447eb64d32ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyY: 0
+  spriteVariants:
+  - {fileID: 21300000, guid: fb57b06e128bf3f4aab881778c182f45, type: 3}
+  - {fileID: 21300000, guid: 98004cf2d5118fb41a12b4e1565e5387, type: 3}
+  - {fileID: 21300000, guid: 86f863a27a243ff47b2554135a5ebbb3, type: 3}
+  - {fileID: 21300000, guid: 38376447f8773404ab25c24f7bf2e9e1, type: 3}
+  - {fileID: 21300000, guid: 38f8e1a55e262d6409da2cc395489f69, type: 3}
+  - {fileID: 21300000, guid: 6140b488d011c8c40b68847c2f31cc36, type: 3}
+  - {fileID: 21300000, guid: b144319c5144d2d4c825e2d3c797ac20, type: 3}

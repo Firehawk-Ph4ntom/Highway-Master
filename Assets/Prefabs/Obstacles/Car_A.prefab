@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4845199982690796177}
   - component: {fileID: -8935741924613423541}
   - component: {fileID: 984149883594808929}
+  - component: {fileID: -4882260033557503203}
   m_Layer: 0
   m_Name: Car_A
   m_TagString: Untagged
@@ -101,7 +102,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8824832986119816886}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -119,7 +120,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &984149883594808929
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +151,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -164,5 +165,26 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.12, y: 7.68}
+  m_Size: {x: 3.35, y: 6.35}
   m_EdgeRadius: 0
+--- !u!114 &-4882260033557503203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824832986119816886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d7d9816db5a04896447eb64d32ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  destroyY: 0
+  spriteVariants:
+  - {fileID: 21300000, guid: 1b0b6781381e0ca4b8b0a25965e414ad, type: 3}
+  - {fileID: 21300000, guid: 65db334b33361ce4bb3d8cd27c6c0f52, type: 3}
+  - {fileID: 21300000, guid: 2ec29faa24ab23240a6dc18cf38fbffc, type: 3}
+  - {fileID: 21300000, guid: 0745f6dd17c8e944fb53bd831607ac81, type: 3}
+  - {fileID: 21300000, guid: 637cf16500c6b19479741b8a0e1e2716, type: 3}
+  - {fileID: 21300000, guid: 04e33255988e4634d897144f3363ce31, type: 3}
+  - {fileID: 21300000, guid: ba646687bb176884f9f7a4e275a9e30a, type: 3}
