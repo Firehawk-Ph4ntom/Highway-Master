@@ -12,10 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
   m_Name: Amb_WoodCreakTree1
   m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
-  clips: []
-  volume: 1
-  volumeShift: {x: 0, y: 0}
-  pitchShift: {x: 0, y: 0}
-  delay: {x: 0, y: 0}
-  limit: 0
-  mixerGroup: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: d11b73c63f4ba054a8696735dd4a3364, type: 3}
+  - {fileID: 8300000, guid: 898b434ba70bc8843926111513db9efd, type: 3}
+  - {fileID: 8300000, guid: 2f9c3fd4d4bfe8f47a2fcb1370b926bc, type: 3}
+  - {fileID: 8300000, guid: 183d6661caa95304dbfa8a0bd21f6e70, type: 3}
+  - {fileID: 8300000, guid: 78df207e88420344e985c94f79a9902d, type: 3}
+  - {fileID: 8300000, guid: 2b5898370d41ab84986e81830b4cf3e5, type: 3}
+  - {fileID: 8300000, guid: 9c12ca64d84bb7d4d8fa137561a7a79b, type: 3}
+  - {fileID: 8300000, guid: f9cfb6041ef30b84eb1ffedd4c6b68ea, type: 3}
+  - {fileID: 8300000, guid: 006a1edbd87c11f409d5dc4b61b8a53b, type: 3}
+  - {fileID: 8300000, guid: 11573f2eff642b14c9e41a75437215a5, type: 3}
+  - {fileID: 8300000, guid: 38b9cd2ec48f1dd4d8017de7106526c7, type: 3}
+  - {fileID: 8300000, guid: 97021f00288b2f74dbcbf638c0212f73, type: 3}
+  - {fileID: 8300000, guid: c204e064ffb631647a1080e2e3a1ecb2, type: 3}
+  - {fileID: 8300000, guid: 670162144bdab7f4ba667c12625e436a, type: 3}
+  volume: 0.7
+  volumeShift: {x: -0.15, y: 0}
+  pitchShift: {x: -0.1, y: 0.05}
+  delay: {x: 0, y: 3}
+  limit: 3
+  mixerGroup: {fileID: 3085316346858550708, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

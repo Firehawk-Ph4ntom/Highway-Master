@@ -391,3 +391,91 @@
 //     <Sound>WACreak_tree1_m</Sound>
 //     <Sound>WACreak_tree1_n</Sound>
 // </AudioEvent>
+
+//0-------------------
+
+// Gonna use Generic small building die audio for car crash
+
+// <AudioEvent id="SmallGenericBuilding_Die" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "80"
+//     VolumeShift = "-10"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "0" High = "20" />
+//     <Sound>WIBuild_diea</Sound> <Sound>WIBuild_dieb</Sound> <Sound>WIBuild_diec</Sound> <Sound>WIBuild_died</Sound> <Sound>WIBuild_diee</Sound> 
+//     <Sound>WIBuild_dief</Sound> <Sound>WIBuild_dieg</Sound> <Sound>WIBuild_dieh</Sound> <Sound>WIBuild_diei</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="SmallGenericBuilding_Explosion" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "80"
+//     VolumeShift = "-10"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "-20" High = "-10" />
+//     <Sound>WIExplo_geneLarg1a</Sound> <Sound>WIExplo_geneLarg1b</Sound> <Sound>WIExplo_geneLarg1c</Sound> <Sound>WIExplo_geneLarg1d</Sound> 
+//     <Sound>WIExplo_geneLarg1e</Sound> <Sound>WIExplo_geneLarg1f</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="SmallGenericBuilding_UniqueExplosion" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "80"
+//     VolumeShift = "-10"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "0" High = "20" />
+//     <Sound>WIExplo_uniqLarg1a</Sound> <Sound>WIExplo_uniqLarg1b</Sound> <Sound>WIExplo_uniqLarg1c</Sound> <Sound>WIExplo_uniqLarg1d</Sound> 
+//     <Sound>WIExplo_uniqLarg1e</Sound> <Sound>WIExplo_uniqLarg1f</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="SmallGenericBuilding_GlassExplosion_Delayed" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "40"
+//     VolumeShift = "-10"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "-10" High = "25" />
+//     <Delay Low = "1500" High = "2500" />
+//     <Sound>WIExplo_glasLarg1a</Sound> <Sound>WIExplo_glasLarg1b</Sound> <Sound>WIExplo_glasLarg1c</Sound> <Sound>WIExplo_glasLarg1d</Sound> 
+//     <Sound>WIExplo_glasLarg1e</Sound> <Sound>WIExplo_glasLarg1f</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="SmallGenericBuilding_MetalExplosion_Delayed" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "40"
+//     VolumeShift = "-10"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "-10" High = "25" />
+//     <Delay Low = "1500" High = "2500" />
+//     <Sound>WIExplo_metaLarg1a</Sound> <Sound>WIExplo_metaLarg1b</Sound> <Sound>WIExplo_metaLarg1c</Sound> <Sound>WIExplo_metaLarg1d</Sound> 
+//     <Sound>WIExplo_metaLarg1e</Sound> <Sound>WIExplo_metaLarg1f</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="SmallGenericBuilding_WoodExplosion_Delayed" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "40"
+//     VolumeShift = "-10"
+//     PlayPercent = "25"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "-10" High = "25" />
+//     <Delay Low = "1500" High = "2500" />
+//     <Sound>WIExplo_woodLarg1a</Sound> <Sound>WIExplo_woodLarg1b</Sound>
+// </AudioEvent>
+
+// <Multisound id="SmallGenericBuilding_Die_MS" >
+//     <Subsound>SmallGenericBuilding_Die</Subsound> 
+//     <Subsound>SmallGenericBuilding_Explosion</Subsound> 
+//     <!-- <Subsound>SmallGenericBuilding_UniqueExplosion</Subsound> --> <-- commented out in original xml by EA, but i'll use it
+//     <Subsound>SmallGenericBuilding_GlassExplosion_Delayed</Subsound> 
+//     <Subsound>SmallGenericBuilding_MetalExplosion_Delayed</Subsound> 
+//     <Subsound>SmallGenericBuilding_WoodExplosion_Delayed</Subsound> 
+// </Multisound>

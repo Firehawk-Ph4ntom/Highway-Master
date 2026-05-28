@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int score = 0;
     public bool gameOver = false;
-    public float gameOverDelay = 2.0f;
+    public float gameOverDelay = 3.0f;
     public float worldSpeed = 10.0f;
 
     private void Start()

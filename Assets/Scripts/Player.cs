@@ -9,6 +9,14 @@ public class ObstacleSpawnData
     public float spawnWeight = 1.0f;
 }
 
+// Another Serializable class to hold the Crash Sound data for each Obstacle type
+[System.Serializable]
+public class CrashSoundData
+{
+    public string obstacleTag;
+    public MultiSoundData sound;
+}
+
 public class Player : MonoBehaviour
 {
     public float laneMoveSpeed = 8.0f;
@@ -27,6 +35,8 @@ public class Player : MonoBehaviour
     public float spawnOffset = 1.0f, destroyOffset = 1.0f;
 
     private Coroutine spawnCoroutine;
+
+    public CrashSoundData[] crashSounds;
 
     private void Start()
     {
@@ -194,13 +204,15 @@ public class Player : MonoBehaviour
     {
         if (!FindFirstObjectByType<GameManager>().gameOver) {
 
+            string collideeTag = collidee.tag;
+
             // Each Obstacle generates a different Crash Type, 
             // which is then saved for different Game Over Menu UI Screens
-            if (collidee.CompareTag("HoleObstacle"))
+            if (collideeTag == "HoleObstacle")
             {
                 PlayerPrefs.SetString("CrashType", "Hole");
             }
-            else if (collidee.CompareTag("BarrelObstacle"))
+            else if (collideeTag == "BarrelObstacle")
             {
                 PlayerPrefs.SetString("CrashType", "Barrel");
             }
@@ -209,10 +221,25 @@ public class Player : MonoBehaviour
                 PlayerPrefs.SetString("CrashType", "Vehicle");
             }
 
+            MultiSoundData sound = GetCrashSound(collideeTag);
+            AudioManager.Instance.Play(sound);
+
             // Then, stop Obstacle Spawning subroutine and trigger Game Over in the Game Manager
             // The Game Over Screen will then change depending on the saved Player Prefs enum
             StopCoroutine(spawnCoroutine);
             FindFirstObjectByType<GameManager>().GameOver();
         }
+    }
+
+    private MultiSoundData GetCrashSound(string obstacleTag)
+    {
+        for (int i = 0; i < crashSounds.Length; i++)
+        {
+            CrashSoundData data = crashSounds[i];
+
+            if (data.obstacleTag == obstacleTag)
+                return data.sound;
+        }
+        return null;
     }
 }
