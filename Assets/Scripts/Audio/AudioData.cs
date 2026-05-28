@@ -170,7 +170,7 @@
 // PlayPercent is a property that determines the chance of playing a sound when event triggered, but not needed here
 
 // 	<AudioEvent id="GDI_Ox_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" Type="WORLD SHROUDED VOICE EVERYONE" 
-//  MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+//  MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="VOICE">
 // 		<PitchShift Low="-1" High="1" />
 // 		<Sound>GUOxTra_VoiCrasha</Sound>
 // 		<Sound>GUOxTra_VoiCrashb</Sound>
