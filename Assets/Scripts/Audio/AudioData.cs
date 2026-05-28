@@ -500,3 +500,22 @@
 //     <Sound>WImpac_bodyfallm</Sound>
 //     <Sound>WImpac_bodyfalln</Sound>
 // </AudioEvent>
+
+// <AudioEvent id="BodyDirt" Volume="25%" VolumeShift="-10%" Limit="3" Priority="LOW" Type="WORLD SHROUDED EVERYONE" 
+    //Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Sound>WImpac_bodyfalla</Sound>
+//     <Sound>WImpac_bodyfallb</Sound>
+//     <Sound>WImpac_bodyfallc</Sound>
+//     <Sound>WImpac_bodyfalld</Sound>
+//     <Sound>WImpac_bodyfalle</Sound>
+//     <Sound>WImpac_bodyfallf</Sound>
+//     <Sound>WImpac_bodyfallg</Sound>
+//     <Sound>WImpac_bodyfallh</Sound>
+//     <Sound>WImpac_bodyfalli</Sound>
+//     <Sound>WImpac_bodyfallj</Sound>
+//     <Sound>WImpac_bodyfallk</Sound>
+//     <Sound>WImpac_bodyfalll</Sound>
+//     <Sound>WImpac_bodyfallm</Sound>
+//     <Sound>WImpac_bodyfalln</Sound>
+// </AudioEvent>

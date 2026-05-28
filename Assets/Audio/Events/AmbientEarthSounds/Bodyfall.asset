@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: Bodyfall
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 1a9a2e1eaa6301840b55c1f1427d9808, type: 3}
+  - {fileID: 8300000, guid: b95cc5f74d5f09343911b6cb08f2da7e, type: 3}
+  - {fileID: 8300000, guid: 4f8fcfd8952e7f942a6797b64591be42, type: 3}
+  - {fileID: 8300000, guid: 17b0f9ab5c3a35848b977597ec22367b, type: 3}
+  - {fileID: 8300000, guid: 0f1c9a4df9cc2314b9fd4ac6e9704259, type: 3}
+  - {fileID: 8300000, guid: 361961339fb6ef2438fb85c00ae03686, type: 3}
+  - {fileID: 8300000, guid: 0b459a5fabdf02b488ee82e62478c763, type: 3}
+  - {fileID: 8300000, guid: 86dbf9ae4b397ee4b80bc7218039e0d5, type: 3}
+  - {fileID: 8300000, guid: b49d0dd74ace3b640a18d5dbe5e249ef, type: 3}
+  - {fileID: 8300000, guid: f81fa05560945e14e99122bd64e56fe9, type: 3}
+  - {fileID: 8300000, guid: d6b1fd3d95f7b8d4585021eeb175ef33, type: 3}
+  - {fileID: 8300000, guid: 50125148af9bc3740b3d9c2df57a6f0d, type: 3}
+  - {fileID: 8300000, guid: 2f0624b768ce6184c80f7167179fdad6, type: 3}
+  - {fileID: 8300000, guid: 05858d69c40aa5f49b73f69587d25ff8, type: 3}
+  - {fileID: 8300000, guid: 735336e63d5cc0f4bb69ee15375031ca, type: 3}
+  volume: 0.55
+  volumeShift: {x: -0.1, y: 0}
+  pitchShift: {x: -0.5, y: 0.5}
+  delay: {x: 0, y: 0.05}
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

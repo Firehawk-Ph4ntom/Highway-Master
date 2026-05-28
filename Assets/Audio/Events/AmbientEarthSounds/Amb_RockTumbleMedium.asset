@@ -12,10 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
   m_Name: Amb_RockTumbleMedium
   m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: e79189e1de1641f46a546791620830fe, type: 3}
+  - {fileID: 8300000, guid: 4b8f4efead4775746a93218ad448277c, type: 3}
+  - {fileID: 8300000, guid: 49db2531f59f3734184e60f87bcb28ab, type: 3}
+  - {fileID: 8300000, guid: f05ac961d75acd240b77848993f9a52a, type: 3}
+  - {fileID: 8300000, guid: 653424192e296b94197c9dd5b9cc87c3, type: 3}
+  - {fileID: 8300000, guid: 2a1ef6df0b84b764ca3c3250f1c20a66, type: 3}
+  - {fileID: 8300000, guid: 62b0f082552b3cf4b8752457ffdc48fd, type: 3}
+  - {fileID: 8300000, guid: 18ed4e01a2f0faf4c90cd49116c332c3, type: 3}
+  - {fileID: 8300000, guid: 3ff58e64aea5a4f488531daa2e01a81e, type: 3}
+  - {fileID: 8300000, guid: 2fa4255f5d9c29c4e8afe085a2d83601, type: 3}
+  - {fileID: 8300000, guid: 045bc1a2f0b2f6248a55f234498306ee, type: 3}
+  - {fileID: 8300000, guid: b3bd33fb1dcb7df4d8ba8b52545a1dbf, type: 3}
+  - {fileID: 8300000, guid: 6b089f020c7c4c84b83987b59804bd25, type: 3}
+  - {fileID: 8300000, guid: f2673dfa6810db34d83aef8b454ee1dc, type: 3}
+  - {fileID: 8300000, guid: d5ad922eeafc5f04cbb83d2278c514cc, type: 3}
+  - {fileID: 8300000, guid: 9a7e29606db2a87468c039ca0287d15e, type: 3}
+  - {fileID: 8300000, guid: 21f1b8f6255d3a44f8225bd7126f16cc, type: 3}
   volume: 1
-  volumeShift: {x: 0, y: 0}
-  pitchShift: {x: 0, y: 0}
+  volumeShift: {x: -0.1, y: 0}
+  pitchShift: {x: -0.1, y: 0.05}
   delay: {x: 0, y: 0}
-  limit: 0
-  mixerGroup: {fileID: 0}
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}
