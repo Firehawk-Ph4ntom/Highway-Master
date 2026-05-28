@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: VehicleExplosionSmall_ExplosionAmplifier
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: ab9f72e7423604243a8f555f67d2fbc6, type: 3}
+  - {fileID: 8300000, guid: 7a3ae300a6b057a40867954ad94db567, type: 3}
+  - {fileID: 8300000, guid: b97c31578b8ee884683f012de84ec6b3, type: 3}
+  - {fileID: 8300000, guid: dbda153625423144d9443c38d1f763ad, type: 3}
+  - {fileID: 8300000, guid: cc5faf9ae5a082b478f9712a43fadc28, type: 3}
+  - {fileID: 8300000, guid: 95b29d6ef753b6a4c82db52b20c8bb56, type: 3}
+  volume: 0.7
+  volumeShift: {x: -0.15, y: 0}
+  pitchShift: {x: -0.1, y: 0.1}
+  delay: {x: 0, y: 0}
+  loop: 0
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}
