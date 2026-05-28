@@ -288,3 +288,60 @@
 
 // and then the AudioEvent data could be a fade in/fade out effect for the turning sound
 // TURN_LEFT having fadein, and TURN_LEFT_END having fadeout, and then the AudioManager can handle the fade effect
+
+//000----------------------------------------
+
+// Time for some ambiancee
+
+// Ambient sounds can be used to create a more immersive environment in the game, such as the sound of wind and birds
+// Set to LOOP control usually
+
+// PerFilePitchShift and PerFileVolumeShift are properties that allow for random variation in pitch and volume for each individual sound file within an AudioEvent,
+// not the entire AudioEvent, but will treat it like normal VolumeShift and PitchShift
+
+// <AudioEvent id="Amb_Birds1" Volume="70%" PerFileVolumeShift="-5%" Limit="3" Priority="LOWEST" Type="WORLD SHROUDED EVERYONE" 
+    //Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="AMBIENT">
+// 	<PerFilePitchShift Low="-5" High="5" />
+// 	<Delay Low="3000" High="8000" />
+// 	<Sound>WABirds_amonh1a</Sound>
+// 	<Sound>WABirds_amonh1b</Sound>
+// 	<Sound>WABirds_amonh1c</Sound>
+// 	<Sound>WABirds_amonh1d</Sound>
+// 	<Sound>WABirds_amonh1e</Sound>
+// 	<Sound>WABirds_amonh1f</Sound>
+// 	<Sound>WABirds_amonh1g</Sound>
+// 	<Sound>WABirds_amonh1h</Sound>
+// 	<Sound>WABirds_amonh1i</Sound>
+// 	<Sound>WABirds_amonh1j</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="Amb_Birds2" Volume="70%" PerFileVolumeShift="-10%" Limit="3" Priority="LOWEST" Type="WORLD SHROUDED EVERYONE" 
+    //Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="AMBIENT">
+//     <PerFilePitchShift Low="-5" High="5" />
+//     <Delay Low="3000" High="8000" />
+//     <Sound>WABirds_amonh2a</Sound>
+//     <Sound>WABirds_amonh2b</Sound>
+//     <Sound>WABirds_amonh2c</Sound>
+//     <Sound>WABirds_amonh2d</Sound>
+//     <Sound>WABirds_amonh2e</Sound>
+//     <Sound>WABirds_amonh2f</Sound>
+//     <Sound>WABirds_amonh2g</Sound>
+//     <Sound>WABirds_amonh2h</Sound>
+//     <Sound>WABirds_amonh2i</Sound>
+//     <Sound>WABirds_amonh2j</Sound>
+// </AudioEvent>
+
+// Hmm, add a crow too ig, why not
+// Crow Squak fits best here i think
+
+// <AudioEvent id="Amb_BirdsCrowSquak" Volume="70%" PerFileVolumeShift="-15%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" 
+    // SubmixSlider="AMBIENT">
+// 	<PerFilePitchShift Low="-5" High="5" />
+// 	<Delay Low="4000" High="11000" />
+// 	<Sound>WABirds_crow3a</Sound>
+// 	<Sound>WABirds_crow3b</Sound>
+// 	<Sound>WABirds_crow3c</Sound>
+// 	<Sound>WABirds_crow3d</Sound>
+// 	<Sound>WABirds_crow3e</Sound>
+// </AudioEvent>
