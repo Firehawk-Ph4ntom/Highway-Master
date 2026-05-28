@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: SmallGenericBuilding_MetalExplosion_Delayed
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: d60e155440efd8a44b7c78a978e896e3, type: 3}
+  - {fileID: 8300000, guid: b4f8c124c02a7cc42a7cb6e28abd1f43, type: 3}
+  - {fileID: 8300000, guid: 66020ba54cf180a44a19bdb8ce1387a3, type: 3}
+  - {fileID: 8300000, guid: ab93fb96c1a0a844f83b52e8ab894afd, type: 3}
+  - {fileID: 8300000, guid: c540651bcc3290f458289b8150fadd48, type: 3}
+  - {fileID: 8300000, guid: e1fc142c5f3891245bdb8d97e3e278f7, type: 3}
+  volume: 0.4
+  volumeShift: {x: -0.1, y: 0}
+  pitchShift: {x: -0.1, y: 0.25}
+  delay: {x: 0.5, y: 1}
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

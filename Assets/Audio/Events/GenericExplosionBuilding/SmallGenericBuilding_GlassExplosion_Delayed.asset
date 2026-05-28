@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: SmallGenericBuilding_GlassExplosion_Delayed
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: a079d4edf2a413148a88270928265a28, type: 3}
+  - {fileID: 8300000, guid: c82fe7ad226360f4c8ce6e17abfa264a, type: 3}
+  - {fileID: 8300000, guid: 2ed40f5a07e761a47a52739536c500ae, type: 3}
+  - {fileID: 8300000, guid: 46a0e08db4917964881da59039ed2b90, type: 3}
+  - {fileID: 8300000, guid: 69933bf69c478984ba096683c38f5883, type: 3}
+  - {fileID: 8300000, guid: 3dff7376967595244bcfc9ad6ad2bf39, type: 3}
+  volume: 0.4
+  volumeShift: {x: -0.1, y: 0}
+  pitchShift: {x: -0.1, y: 0.25}
+  delay: {x: 0.5, y: 1}
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

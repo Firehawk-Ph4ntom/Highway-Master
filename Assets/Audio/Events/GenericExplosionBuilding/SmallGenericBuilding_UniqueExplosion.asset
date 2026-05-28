@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: SmallGenericBuilding_UniqueExplosion
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: bbb5fdf3286339544bcc6bf91d6cf78f, type: 3}
+  - {fileID: 8300000, guid: b8c580ea5e300da4fbac80076b9302e7, type: 3}
+  - {fileID: 8300000, guid: f8cf837171a357c4a83f6a4859a9478e, type: 3}
+  - {fileID: 8300000, guid: 8f22df2475ff83f488e3a7a38026c19e, type: 3}
+  - {fileID: 8300000, guid: 36d89fdae1724f04b85df35bf5665b39, type: 3}
+  - {fileID: 8300000, guid: 779a8c85beb1bc94bbe0c3987bf220cc, type: 3}
+  volume: 0.8
+  volumeShift: {x: -0.1, y: 0}
+  pitchShift: {x: 0, y: 0.2}
+  delay: {x: 0, y: 0}
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

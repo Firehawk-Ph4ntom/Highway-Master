@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   scoreText: {fileID: 366317037}
   gameOver: 0
-  gameOverDelay: 3
+  gameOverDelay: 5
   worldSpeed: 10
 --- !u!4 &1413964300
 Transform:
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   destroyOffset: 1
   crashSounds:
   - obstacleTag: VehicleObstacle
-    sound: {fileID: 11400000, guid: 5bd4dc7daffff114fa6ec36b4cdf623a, type: 2}
+    sound: {fileID: 11400000, guid: f7648228cf07c754383b61410dbb4a9c, type: 2}
   - obstacleTag: HoleObstacle
     sound: {fileID: 11400000, guid: 5bd4dc7daffff114fa6ec36b4cdf623a, type: 2}
   - obstacleTag: BarrelObstacle

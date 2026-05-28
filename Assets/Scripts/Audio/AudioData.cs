@@ -395,6 +395,8 @@
 //0-------------------
 
 // Gonna use Generic small building die audio for car crash
+// BaseSoundEffect baseInheritance attributes aren't needed for this project (like the min-max range, reverb/dry level, priority, etc),
+// and mostly contain other base info that got overridden anyway
 
 // <AudioEvent id="SmallGenericBuilding_Die" inheritFrom="AudioEvent:BaseSoundEffect"
 //     Volume = "80"
@@ -418,18 +420,6 @@
 //     <PitchShift Low = "-20" High = "-10" />
 //     <Sound>WIExplo_geneLarg1a</Sound> <Sound>WIExplo_geneLarg1b</Sound> <Sound>WIExplo_geneLarg1c</Sound> <Sound>WIExplo_geneLarg1d</Sound> 
 //     <Sound>WIExplo_geneLarg1e</Sound> <Sound>WIExplo_geneLarg1f</Sound>
-// </AudioEvent>
-
-// <AudioEvent id="SmallGenericBuilding_UniqueExplosion" inheritFrom="AudioEvent:BaseSoundEffect"
-//     Volume = "80"
-//     VolumeShift = "-10"
-//     Control = "INTERRUPT"
-//     Limit = "3"
-//     Type = "WORLD SHROUDED EVERYONE"
-//     SubmixSlider = "SOUNDFX" >
-//     <PitchShift Low = "0" High = "20" />
-//     <Sound>WIExplo_uniqLarg1a</Sound> <Sound>WIExplo_uniqLarg1b</Sound> <Sound>WIExplo_uniqLarg1c</Sound> <Sound>WIExplo_uniqLarg1d</Sound> 
-//     <Sound>WIExplo_uniqLarg1e</Sound> <Sound>WIExplo_uniqLarg1f</Sound>
 // </AudioEvent>
 
 // <AudioEvent id="SmallGenericBuilding_GlassExplosion_Delayed" inheritFrom="AudioEvent:BaseSoundEffect"
@@ -458,6 +448,18 @@
 //     <Sound>WIExplo_metaLarg1e</Sound> <Sound>WIExplo_metaLarg1f</Sound>
 // </AudioEvent>
 
+// <AudioEvent id="SmallGenericBuilding_UniqueExplosion" inheritFrom="AudioEvent:BaseSoundEffect"
+//     Volume = "80"
+//     VolumeShift = "-10"
+//     Control = "INTERRUPT"
+//     Limit = "3"
+//     Type = "WORLD SHROUDED EVERYONE"
+//     SubmixSlider = "SOUNDFX" >
+//     <PitchShift Low = "0" High = "20" />
+//     <Sound>WIExplo_uniqLarg1a</Sound> <Sound>WIExplo_uniqLarg1b</Sound> <Sound>WIExplo_uniqLarg1c</Sound> <Sound>WIExplo_uniqLarg1d</Sound> 
+//     <Sound>WIExplo_uniqLarg1e</Sound> <Sound>WIExplo_uniqLarg1f</Sound>
+// </AudioEvent>
+
 // <AudioEvent id="SmallGenericBuilding_WoodExplosion_Delayed" inheritFrom="AudioEvent:BaseSoundEffect"
 //     Volume = "40"
 //     VolumeShift = "-10"
@@ -471,11 +473,13 @@
 //     <Sound>WIExplo_woodLarg1a</Sound> <Sound>WIExplo_woodLarg1b</Sound>
 // </AudioEvent>
 
+
 // <Multisound id="SmallGenericBuilding_Die_MS" >
-//     <Subsound>SmallGenericBuilding_Die</Subsound> 
+//     <Subsound>SmallGenericBuilding_Die</Subsound> <-- Decided not to use it, too long
+
 //     <Subsound>SmallGenericBuilding_Explosion</Subsound> 
-//     <!-- <Subsound>SmallGenericBuilding_UniqueExplosion</Subsound> --> <-- commented out in original xml by EA, but i'll use it
 //     <Subsound>SmallGenericBuilding_GlassExplosion_Delayed</Subsound> 
 //     <Subsound>SmallGenericBuilding_MetalExplosion_Delayed</Subsound> 
+//     <!-- <Subsound>SmallGenericBuilding_UniqueExplosion</Subsound> --> <-- commented out in original xml by EA, but i'll use it here because why not
 //     <Subsound>SmallGenericBuilding_WoodExplosion_Delayed</Subsound> 
 // </Multisound>
