@@ -22,5 +22,4 @@ MonoBehaviour:
   pitchShift: {x: 0, y: 0}
   delay: {x: 0, y: 0}
   limit: 1
-  control: 0
   mixerGroup: {fileID: -3680515403840671662, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

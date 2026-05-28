@@ -30,7 +30,7 @@ public class AmbientStreamPlayer : MonoBehaviour
 
         source.Play();
 
-        // Random playback offset
+        // Random playback offset, audio can start playing from a random point in the clip
         if (randomStart)
         {
             source.time = Random.Range(0f, ambientClip.length);

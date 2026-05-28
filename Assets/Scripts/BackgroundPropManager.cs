@@ -8,7 +8,7 @@ public class BackgroundPropManager : MonoBehaviour
     public float spawnY = 7.0f;
     public float destroyY = -7.0f;
 
-    public float minSpawnDelay = 0.4f, maxSpawnDelay = 1.2f;
+    public float minSpawnDelay = 0.3f, maxSpawnDelay = 1f;
     public float leftMinX = -5.5f, leftMaxX = -8.5f;
     public float rightMinX = 5.5f, rightMaxX = 8.5f;
 

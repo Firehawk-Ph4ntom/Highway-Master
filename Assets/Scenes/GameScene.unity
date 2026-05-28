@@ -860,8 +860,8 @@ MonoBehaviour:
   - {fileID: 6260704838558376721, guid: 438e76ac2d00a944c8c13496c5de7fef, type: 3}
   spawnY: 7
   destroyY: -7
-  minSpawnDelay: 0.4
-  maxSpawnDelay: 1.2
+  minSpawnDelay: 0.3
+  maxSpawnDelay: 1
   leftMinX: -5.5
   leftMaxX: -8.5
   rightMinX: 5.5
