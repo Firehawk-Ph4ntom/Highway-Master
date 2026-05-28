@@ -18,11 +18,23 @@
 // VehicleExplosionSmall_MediumDistant
 // VehicleExplosionSmall_MetalPipe
 // VehicleExplosionSmall_Unique
-// VehicleExplosionCarMS
-// VehicleExplosionCar_Close
-// VehicleExplosionCar_MediumDistant
-// VehicleExplosionCar_Unique
-// GDI_Ox_VoiceCrash
+
+// Amb_Birds1
+// Amb_Birds2
+// Amb_BirdsCrowSquak
+// Amb_BirdsCrowSimple
+// AmbStream_BlueZoneA_5point1
+// AmbStream_BlueZone03_Pristine_5point1
+// Amb_WoodCreakTree1
+
+// SmallGenericBuilding_Die_MS
+// SmallGenericBuilding_Explosion
+// SmallGenericBuilding_GlassExplosion_Delayed
+// SmallGenericBuilding_MetalExplosion_Delayed
+// SmallGenericBuilding_UniqueExplosion
+// SmallGenericBuilding_WoodExplosion_Delayed
+
+// Amb_DirtFall
 
 
 // Gonna keep the same names for better reference
@@ -176,6 +188,7 @@
 
 // PlayPercent is a property that determines the chance of playing a sound when event triggered, but I don't want it here
 
+
 // 	<AudioEvent id="GDI_Ox_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" Type="WORLD SHROUDED VOICE EVERYONE" 
 //  MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="VOICE">
 // 		<PitchShift Low="-1" High="1" />
@@ -187,75 +200,17 @@
 // 		<Sound>GUOxTra_VoiCrashe</Sound> // OH NO!.. OH NOO!
 // 	</AudioEvent>
 
-// Better than Using Verti sounds :
-// <AudioEvent id="NOD_VertigoBomber_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" Type="WORLD SHROUDED VOICE EVERYONE" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// <AudioEvent id="NOD_VertigoBomber_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" 
+    // Type="WORLD SHROUDED VOICE EVERYONE" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="VOICE">
 //     <PitchShift Low="-1" High="1" />
 //     <Sound>NuVerti_VoiCrasha</Sound> // IT'S OVER!
 //     <Sound>NuVerti_VoiCrashb</Sound> // NO NO.. NOO!!
 //     <Sound>NuVerti_VoiCrashc</Sound> // whoops <-- le funni line that could be used as easter egg joke when hitting a barrel
 // </AudioEvent>
 
-// 	<AudioEvent id="VehicleExplosionCar_Close" Volume="45%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE"
-    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
-// 		<PitchShift Low="-10" High="10" />
-// 		<Delay Low="0" High="10" />
-// 		<Sound>WUVehic_explFGa</Sound>
-// 		<Sound>WUVehic_explFGb</Sound>
-// 		<Sound>WUVehic_explFGc</Sound>
-// 		<Sound>WUVehic_explFGd</Sound>
-// 		<Sound>WUVehic_explFGe</Sound>
-// 		<Sound>WUVehic_explFGf</Sound>
-// 		<Sound>WUVehic_explFGg</Sound>
-// 		<Sound>WUVehic_explFGh</Sound>
-// 		<Sound>WUVehic_explFGi</Sound>
-// 	</AudioEvent>
-
-// 	<AudioEvent id="VehicleExplosionCar_MediumDistant" Volume="65%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
-    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
-// 	<PitchShift Low="-10" High="10" />
-// 		<Delay Low="20" High="100" />
-// 		<Sound>WUVehic_explMGa</Sound>
-// 		<Sound>WUVehic_explMGb</Sound>
-// 		<Sound>WUVehic_explMGc</Sound>
-// 		<Sound>WUVehic_explMGd</Sound>
-// 		<Sound>WUVehic_explMGe</Sound>
-// 		<Sound>WUVehic_explMGf</Sound>
-// 		<Sound>WUVehic_explMGg</Sound>
-// 		<Sound>WUVehic_explMGh</Sound>
-// 		<Sound>WUVehic_explMGi</Sound>
-// 		<Sound>WUVehic_explMGj</Sound>
-// 		<Sound>WUVehic_explMGk</Sound>
-// 		<Sound>WUVehic_explMGl</Sound>
-// 		<Sound>WUVehic_explMGm</Sound>
-// 		<Sound>WUVehic_explMGn</Sound>
-// 		<Sound>WUVehic_explMGo</Sound>
-// 		<Sound>WUVehic_explMGp</Sound>
-// 		<Sound>WUVehic_explMGq</Sound>
-// 		<Sound>WUVehic_explMGr</Sound>
-// 	</AudioEvent>
-
-// 	<AudioEvent id="VehicleExplosionCar_Unique" Volume="65%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
-    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
-// 		<PitchShift Low="-10" High="10" />
-// 		<Delay Low="10" High="50" />
-// 		<Sound>WUVehic_explUniqa</Sound>
-// 		<Sound>WUVehic_explUniqb</Sound>
-// 		<Sound>WUVehic_explUniqc</Sound>
-// 		<Sound>WUVehic_explUniqd</Sound>
-// 		<Sound>WUVehic_explUniqe</Sound>
-// 		<Sound>WUVehic_explUniqf</Sound>
-// 		<Sound>WUVehic_explUniqg</Sound>
-// 		<Sound>WUVehic_explUniqh</Sound>
-// 		<Sound>WUVehic_explUniqi</Sound>
-// 		<Sound>WUVehic_explUniqj</Sound>
-// 		<Sound>WUVehic_explUniqk</Sound>
-// 	</AudioEvent>
-
-// 	<Multisound id="VehicleExplosionCarMS">
-// 		<Subsound>VehicleExplosionCar_Close</Subsound>
-// 		<Subsound>VehicleExplosionCar_MediumDistant</Subsound>
-// 		<Subsound>VehicleExplosionCar_Unique</Subsound>
-// 	</Multisound>
+//actually,
+// After thinking, might just use wilheim screams instead (much funnier too) better than using ox and verti sounds
+// Take Ox Crash AudioEvent and give it NUYELL audiofiles, and then rename AudioEvent to Car_VoiceCrash
 
 // Hmm, might be worth added ClientBehaviors too?
 
@@ -398,6 +353,7 @@
 // BaseSoundEffect baseInheritance attributes aren't needed for this project (like the min-max range, reverb/dry level, priority, etc),
 // and mostly contain other base info that got overridden anyway
 
+// Unused
 // <AudioEvent id="SmallGenericBuilding_Die" inheritFrom="AudioEvent:BaseSoundEffect"
 //     Volume = "80"
 //     VolumeShift = "-10"
@@ -430,7 +386,7 @@
 //     Type = "WORLD SHROUDED EVERYONE"
 //     SubmixSlider = "SOUNDFX" >
 //     <PitchShift Low = "-10" High = "25" />
-//     <Delay Low = "1500" High = "2500" />
+//     <Delay Low = "1500" High = "2500" /> <-- delay too long, lowered it in Unity to 500-1000ms
 //     <Sound>WIExplo_glasLarg1a</Sound> <Sound>WIExplo_glasLarg1b</Sound> <Sound>WIExplo_glasLarg1c</Sound> <Sound>WIExplo_glasLarg1d</Sound> 
 //     <Sound>WIExplo_glasLarg1e</Sound> <Sound>WIExplo_glasLarg1f</Sound>
 // </AudioEvent>
@@ -443,7 +399,7 @@
 //     Type = "WORLD SHROUDED EVERYONE"
 //     SubmixSlider = "SOUNDFX" >
 //     <PitchShift Low = "-10" High = "25" />
-//     <Delay Low = "1500" High = "2500" />
+//     <Delay Low = "1500" High = "2500" /> <-- delay too long, lowered it in Unity to 500-1000ms
 //     <Sound>WIExplo_metaLarg1a</Sound> <Sound>WIExplo_metaLarg1b</Sound> <Sound>WIExplo_metaLarg1c</Sound> <Sound>WIExplo_metaLarg1d</Sound> 
 //     <Sound>WIExplo_metaLarg1e</Sound> <Sound>WIExplo_metaLarg1f</Sound>
 // </AudioEvent>
@@ -469,7 +425,7 @@
 //     Type = "WORLD SHROUDED EVERYONE"
 //     SubmixSlider = "SOUNDFX" >
 //     <PitchShift Low = "-10" High = "25" />
-//     <Delay Low = "1500" High = "2500" />
+//     <Delay Low = "1500" High = "2500" /> <-- delay too long, lowered it in Unity to 500-1000ms
 //     <Sound>WIExplo_woodLarg1a</Sound> <Sound>WIExplo_woodLarg1b</Sound>
 // </AudioEvent>
 
@@ -483,3 +439,64 @@
 //     <!-- <Subsound>SmallGenericBuilding_UniqueExplosion</Subsound> --> <-- commented out in original xml by EA, but i'll use it here because why not
 //     <Subsound>SmallGenericBuilding_WoodExplosion_Delayed</Subsound> 
 // </Multisound>
+
+// For hole crashes, we need to add some dirt/rock falling sounds, simulating falling debris
+
+// <AudioEvent id="Amb_DirtFall" Volume="35%" PerFileVolumeShift="-10%" Limit="3" Priority="LOWEST" 
+    //Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" 
+    // SubmixSlider="AMBIENT"> <-- In this case it should be SOUNDFX instead cause it's not used as an ambient audio
+//     <PerFilePitchShift Low="-5" High="5" />
+//     <Delay Low="3000" High="10000" />
+//     <Sound>WADirt_fall_1a</Sound>
+//     <Sound>WADirt_fall_1b</Sound>
+//     <Sound>WADirt_fall_1c</Sound>
+//     <Sound>WADirt_fall_1d</Sound>
+//     <Sound>WADirt_fall_1e</Sound>
+//     <Sound>WADirt_fall_1f</Sound>
+//     <Sound>WADirt_fall_1g</Sound>
+//     <Sound>WADirt_fall_1h</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="Amb_RockTumbleMedium" Volume="80%" PerFileVolumeShift="-10%" Limit="3" Priority="LOWEST" 
+//         Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="450" MaxRange="1000" ReverbEffectLevel="100%" DryLevel="100%" 
+//         SubmixSlider="AMBIENT"> <-- In this case it should be SOUNDFX instead cause it's not used as an ambient audio
+//     <PerFilePitchShift Low="-10" High="5" />
+//     <Delay Low="3000" High="8000" />
+//     <Sound>WARock_tumbl1a</Sound>
+//     <Sound>WARock_tumbl1b</Sound>
+//     <Sound>WARock_tumbl1c</Sound>
+//     <Sound>WARock_tumbl1d</Sound>
+//     <Sound>WARock_tumbl1e</Sound>
+//     <Sound>WARock_tumbl1f</Sound>
+//     <Sound>WARock_tumbl1g</Sound>
+//     <Sound>WARock_tumbl1h</Sound>
+//     <Sound>WARock_tumbl1i</Sound>
+//     <Sound>WARock_tumbl1j</Sound>
+//     <Sound>WARock_tumbl1k</Sound>
+//     <Sound>WARock_tumbl1l</Sound>
+//     <Sound>WARock_tumbl1m</Sound>
+//     <Sound>WARock_tumbl1n</Sound>
+//     <Sound>WARock_tumbl1o</Sound>
+//     <Sound>WACreak_misc1a</Sound>
+//     <Sound>WACreak_misc1b</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="Bodyfall" Volume="25%" VolumeShift="-10%" Limit="3" Priority="LOW" Type="WORLD SHROUDED EVERYONE" 
+    //Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Delay Low="0" High="50" />
+//     <Sound>WImpac_bodyfalla</Sound>
+//     <Sound>WImpac_bodyfallb</Sound>
+//     <Sound>WImpac_bodyfallc</Sound>
+//     <Sound>WImpac_bodyfalld</Sound>
+//     <Sound>WImpac_bodyfalle</Sound>
+//     <Sound>WImpac_bodyfallf</Sound>
+//     <Sound>WImpac_bodyfallg</Sound>
+//     <Sound>WImpac_bodyfallh</Sound>
+//     <Sound>WImpac_bodyfalli</Sound>
+//     <Sound>WImpac_bodyfallj</Sound>
+//     <Sound>WImpac_bodyfallk</Sound>
+//     <Sound>WImpac_bodyfalll</Sound>
+//     <Sound>WImpac_bodyfallm</Sound>
+//     <Sound>WImpac_bodyfalln</Sound>
+// </AudioEvent>
