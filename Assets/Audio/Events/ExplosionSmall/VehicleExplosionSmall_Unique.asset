@@ -30,4 +30,4 @@ MonoBehaviour:
   delay: {x: 0, y: 0}
   limit: 0
   control: 0
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

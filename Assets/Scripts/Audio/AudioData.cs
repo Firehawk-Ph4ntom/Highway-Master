@@ -9,20 +9,23 @@
 //      </NuggetList>
 //  </FXList>
 
-// Added for Clarity for myself of what was used so I dont get lost:
+// for Clarity for myself of what was used so I dont get lost:
+
 // VehicleExplosionSmallMS
 // VehicleExplosionSmall_Close
-// VehicleExplosionSmall_MediumDistant
 // VehicleExplosionSmall_Distant
 // VehicleExplosionSmall_Flange
+// VehicleExplosionSmall_MediumDistant
 // VehicleExplosionSmall_MetalPipe
 // VehicleExplosionSmall_Unique
 // VehicleExplosionCarMS
-// VehicleExplosionCar_MediumDistant
 // VehicleExplosionCar_Close
+// VehicleExplosionCar_MediumDistant
 // VehicleExplosionCar_Unique
 // GDI_Ox_VoiceCrash
-//
+
+
+// Gonna keep the same names for better reference
 
 // Might utilize soundAmbient/soundMoveLoop later down the line 
 // <AudioEntry Sound="PredatorIdleLoop" AudioType="soundAmbient"/>
@@ -33,9 +36,9 @@
 
 // <Multisound id="VehicleExplosionSmallMS">
 // 		<Subsound>VehicleExplosionSmall_Close</Subsound>
-// 		<Subsound>VehicleExplosionSmall_MediumDistant</Subsound>
 // 		<Subsound>VehicleExplosionSmall_Distant</Subsound>
 // 		<Subsound>VehicleExplosionSmall_Flange</Subsound>
+// 		<Subsound>VehicleExplosionSmall_MediumDistant</Subsound>
 // 		<Subsound>VehicleExplosionSmall_MetalPipe</Subsound>
 // 		<Subsound>VehicleExplosionSmall_Unique</Subsound>
 // 	</Multisound>
@@ -47,6 +50,13 @@
 
 // ReverbEffectLevel, DryLevel, Type, MinRange, MaxRange, Priority, aren't needed
 
+// For VolumeShift and PitchShift, use a Vector2 to represent the low and high range for randomization, and then apply that random shift when playing the sound
+// For Delay, also use a Vector2 to represent the low and high range for randomization of the delay before the sound plays, Original delay in XML is in Milliseconds, 
+// but we can convert it to seconds for Unity's WaitForSeconds
+
+// For Control and Limit, we can implement logic in the AudioManager to handle interrupting sounds or limiting the number of simultaneous instances of a sound based on the AudioControl type and limit value.
+
+// Volume is represented as a percentage in the original XML, but we can convert it to a 0-1 range for Unity's AudioSource volume property.
 
 // 	<AudioEvent id="VehicleExplosionSmall_Close" Volume="50%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
         // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
@@ -60,30 +70,6 @@
 // 		<Sound>WUVehic_explFGg</Sound>
 // 		<Sound>WUVehic_explFGh</Sound>
 // 		<Sound>WUVehic_explFGi</Sound>
-// 	</AudioEvent>
-
-// 	<AudioEvent id="VehicleExplosionSmall_MediumDistant" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
-        // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
-// 		<PitchShift Low="-10" High="10" />
-// 		<Delay Low="0" High="500" />
-// 		<Sound>WUVehic_explMGa</Sound>
-// 		<Sound>WUVehic_explMGb</Sound>
-// 		<Sound>WUVehic_explMGc</Sound>
-// 		<Sound>WUVehic_explMGd</Sound>
-// 		<Sound>WUVehic_explMGe</Sound>
-// 		<Sound>WUVehic_explMGf</Sound>
-// 		<Sound>WUVehic_explMGg</Sound>
-// 		<Sound>WUVehic_explMGh</Sound>
-// 		<Sound>WUVehic_explMGi</Sound>
-// 		<Sound>WUVehic_explMGj</Sound>
-// 		<Sound>WUVehic_explMGk</Sound>
-// 		<Sound>WUVehic_explMGl</Sound>
-// 		<Sound>WUVehic_explMGm</Sound>
-// 		<Sound>WUVehic_explMGn</Sound>
-// 		<Sound>WUVehic_explMGo</Sound>
-// 		<Sound>WUVehic_explMGp</Sound>
-// 		<Sound>WUVehic_explMGq</Sound>
-// 		<Sound>WUVehic_explMGr</Sound>
 // 	</AudioEvent>
 
 // 	<AudioEvent id="VehicleExplosionSmall_Distant" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
@@ -128,6 +114,30 @@
 // 		<Sound>WUVehic_explFlanm</Sound>
 // 	</AudioEvent>
 
+// 	<AudioEvent id="VehicleExplosionSmall_MediumDistant" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+        // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="0" High="500" />
+// 		<Sound>WUVehic_explMGa</Sound>
+// 		<Sound>WUVehic_explMGb</Sound>
+// 		<Sound>WUVehic_explMGc</Sound>
+// 		<Sound>WUVehic_explMGd</Sound>
+// 		<Sound>WUVehic_explMGe</Sound>
+// 		<Sound>WUVehic_explMGf</Sound>
+// 		<Sound>WUVehic_explMGg</Sound>
+// 		<Sound>WUVehic_explMGh</Sound>
+// 		<Sound>WUVehic_explMGi</Sound>
+// 		<Sound>WUVehic_explMGj</Sound>
+// 		<Sound>WUVehic_explMGk</Sound>
+// 		<Sound>WUVehic_explMGl</Sound>
+// 		<Sound>WUVehic_explMGm</Sound>
+// 		<Sound>WUVehic_explMGn</Sound>
+// 		<Sound>WUVehic_explMGo</Sound>
+// 		<Sound>WUVehic_explMGp</Sound>
+// 		<Sound>WUVehic_explMGq</Sound>
+// 		<Sound>WUVehic_explMGr</Sound>
+// 	</AudioEvent>
+
 // 	<AudioEvent id="VehicleExplosionSmall_MetalPipe" Volume="55%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
     // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
 // 		<PitchShift Low="-50" High="0" />
@@ -158,11 +168,8 @@
 // 		<Sound>WUVehic_explUniqk</Sound>
 // 	</AudioEvent>
 
-// SubmixSlider is a property that determines which audio mixer group the sound belongs to, allowing for different processing and effects based on the type of sound (e.g., music, sound effects, dialogue)
-
-// SubmixSlider="SOUNDFX" -> mixerGroup = soundEffectsMixerGroup (example)
-// Could use that if audio stutter occurs from too many sounds, 
-// dividing sounds into different buffer groups, but trying to keep it simple for now
+// SubmixSlider is a property that determines which audio mixer group the sound belongs to, 
+// allowing for different processing and effects (like volume) based on the type of sound (e.g., music, sound effects, dialogue)
 
 // Voice Crash played when CrashType is a Vehicle
 // Similarly to VehicleExplosionCarMS
@@ -177,6 +184,21 @@
 // 		<Sound>GUOxTra_VoiCrashc</Sound>
 // 		<Sound>GUOxTra_VoiCrashd</Sound>
 // 		<Sound>GUOxTra_VoiCrashe</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionCar_Close" Volume="45%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE"
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="0" High="10" />
+// 		<Sound>WUVehic_explFGa</Sound>
+// 		<Sound>WUVehic_explFGb</Sound>
+// 		<Sound>WUVehic_explFGc</Sound>
+// 		<Sound>WUVehic_explFGd</Sound>
+// 		<Sound>WUVehic_explFGe</Sound>
+// 		<Sound>WUVehic_explFGf</Sound>
+// 		<Sound>WUVehic_explFGg</Sound>
+// 		<Sound>WUVehic_explFGh</Sound>
+// 		<Sound>WUVehic_explFGi</Sound>
 // 	</AudioEvent>
 
 // 	<AudioEvent id="VehicleExplosionCar_MediumDistant" Volume="65%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
@@ -203,21 +225,6 @@
 // 		<Sound>WUVehic_explMGr</Sound>
 // 	</AudioEvent>
 
-// 	<AudioEvent id="VehicleExplosionCar_Close" Volume="45%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE"
-    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
-// 		<PitchShift Low="-10" High="10" />
-// 		<Delay Low="0" High="10" />
-// 		<Sound>WUVehic_explFGa</Sound>
-// 		<Sound>WUVehic_explFGb</Sound>
-// 		<Sound>WUVehic_explFGc</Sound>
-// 		<Sound>WUVehic_explFGd</Sound>
-// 		<Sound>WUVehic_explFGe</Sound>
-// 		<Sound>WUVehic_explFGf</Sound>
-// 		<Sound>WUVehic_explFGg</Sound>
-// 		<Sound>WUVehic_explFGh</Sound>
-// 		<Sound>WUVehic_explFGi</Sound>
-// 	</AudioEvent>
-
 // 	<AudioEvent id="VehicleExplosionCar_Unique" Volume="65%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
     // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
 // 		<PitchShift Low="-10" High="10" />
@@ -236,8 +243,8 @@
 // 	</AudioEvent>
 
 // 	<Multisound id="VehicleExplosionCarMS">
-// 		<Subsound>VehicleExplosionCar_MediumDistant</Subsound>
 // 		<Subsound>VehicleExplosionCar_Close</Subsound>
+// 		<Subsound>VehicleExplosionCar_MediumDistant</Subsound>
 // 		<Subsound>VehicleExplosionCar_Unique</Subsound>
 // 	</Multisound>
 
