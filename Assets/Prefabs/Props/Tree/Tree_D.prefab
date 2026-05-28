@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5661258189865085308}
   - component: {fileID: 5751147050459423969}
   - component: {fileID: 7532391483442477746}
+  - component: {fileID: -2045243740563270471}
   m_Layer: 3
   m_Name: Tree_D
   m_TagString: Prop
@@ -128,3 +129,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BackgroundProp
   destroyY: 0
+--- !u!114 &-2045243740563270471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6260704838558376721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48382d88cf3b12c45891b0cc4e648f9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AmbientAudioEventData
+  ambientEvents:
+  - audioEvent: {fileID: 11400000, guid: 9d280cfc558d6a545a0f1ada63ca1c8a, type: 2}
+    weight: 100
+  minDelay: 1
+  maxDelay: 3

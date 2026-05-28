@@ -370,3 +370,24 @@
 // 	MinRange="3400" MaxRange="4400" DryLevel="100%" SubmixSlider="AMBIENT">
 // 	<Filename>WABlue_Zone03_5point1</Filename>
 // </AmbientStream>
+
+// <AudioEvent id="Amb_WoodCreakTree1" Volume="70%" PerFileVolumeShift="-15%" Limit="3" Priority="LOWEST" 
+    // Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" 
+    // SubmixSlider="AMBIENT">
+//     <PerFilePitchShift Low="-10" High="5" />
+//     <Delay Low="3000" High="8000" />
+//     <Sound>WACreak_tree1_a</Sound>
+//     <Sound>WACreak_tree1_b</Sound>
+//     <Sound>WACreak_tree1_c</Sound>
+//     <Sound>WACreak_tree1_d</Sound>
+//     <Sound>WACreak_tree1_e</Sound>
+//     <Sound>WACreak_tree1_f</Sound>
+//     <Sound>WACreak_tree1_g</Sound>
+//     <Sound>WACreak_tree1_h</Sound>
+//     <Sound>WACreak_tree1_i</Sound>
+//     <Sound>WACreak_tree1_j</Sound>
+//     <Sound>WACreak_tree1_k</Sound>
+//     <Sound>WACreak_tree1_l</Sound>
+//     <Sound>WACreak_tree1_m</Sound>
+//     <Sound>WACreak_tree1_n</Sound>
+// </AudioEvent>
