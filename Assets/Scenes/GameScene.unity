@@ -1108,13 +1108,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48382d88cf3b12c45891b0cc4e648f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmbientAudioPlayer
-  ambientEvents:
+  ambientAudioEventWeightData:
   - audioEvent: {fileID: 11400000, guid: 6d4524eee14673045aa7bcc7fbca11f9, type: 2}
-    weight: 40
+    playWeight: 40
   - audioEvent: {fileID: 11400000, guid: 8e89c99d6de1dc04089da04a4896593b, type: 2}
-    weight: 25
-  - audioEvent: {fileID: 11400000, guid: 4cd778085dd99f244b3afdc689dfc6b5, type: 2}
-    weight: 5
+    playWeight: 25
   minDelay: 5
   maxDelay: 10
 --- !u!4 &1439916691
@@ -1503,11 +1501,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48382d88cf3b12c45891b0cc4e648f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmbientAudioPlayer
-  ambientEvents:
+  ambientAudioEventWeightData:
   - audioEvent: {fileID: 11400000, guid: 4cd778085dd99f244b3afdc689dfc6b5, type: 2}
-    weight: 40
+    playWeight: 40
   - audioEvent: {fileID: 11400000, guid: 93867062a44bff5418843ec77f2c7f59, type: 2}
-    weight: 25
+    playWeight: 25
   minDelay: 10
   maxDelay: 20
 --- !u!4 &1819596799

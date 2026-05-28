@@ -177,7 +177,7 @@ public class Player : MonoBehaviour
         {
             ObstacleSpawnData data = obstacleSpawnData[i];
 
-            // If Object weight is 0, then it shouldn't spawn at all
+            // If Object weight is 0, then it shouldn't spawn at all/chosen for calculation
             if (data.spawnWeight <= 0.0f)
                 continue;
 
