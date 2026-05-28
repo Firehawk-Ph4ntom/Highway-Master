@@ -37,6 +37,8 @@ public class Player : MonoBehaviour
     private Coroutine spawnCoroutine;
 
     public CrashSoundData[] crashSounds;
+    
+    private Animator animator;
 
     private void Start()
     {
@@ -54,6 +56,8 @@ public class Player : MonoBehaviour
         // Obstacle spawn positions clamped to the lane position array
         transform.position = new Vector3(lanePositions[currentLane], transform.position.y, transform.position.z);
 
+        animator = GetComponent<Animator>();
+
         spawnCoroutine = StartCoroutine(SpawnRoutine());
     }
 
@@ -66,14 +70,19 @@ public class Player : MonoBehaviour
     private void MovePlayer()
     {
         // Player can only move Left or Right
-        if (!isMovingLane)
+        // Play Turn Left and Right animations
+        if (!isMovingLane && !FindFirstObjectByType<GameManager>().gameOver)
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
+            if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && currentLane > 0)
+            {
                 currentLane--;
-
-            else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
+                animator.SetTrigger("TURN_LEFT");
+            }
+            else if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && currentLane < lanePositions.Length - 1)
+            {
                 currentLane++;
-
+                animator.SetTrigger("TURN_RIGHT");
+            }
             currentLane = Mathf.Clamp(currentLane, 0, lanePositions.Length - 1);
         }
 
