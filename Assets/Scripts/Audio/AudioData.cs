@@ -1,0 +1,274 @@
+// Audio Data based on MOD SDK's AudioEvent and Multisound structures, adapted for Unity's ScriptableObject system
+// Data is just a representation of the original XML data and may not include all properties or features from the original format
+
+// Added Multisound that was used in FXList
+// <FXList id="FX_GDIMammothExplode">
+//  <NuggetList> <- Ommitted the NuggetList ParticleSystem structure, not needed for representation
+//
+//  <Sound Value="VehicleExplosionSmallMS" />
+//      </NuggetList>
+//  </FXList>
+
+// Added for Clarity for myself of what was used so I dont get lost:
+// VehicleExplosionSmallMS
+// VehicleExplosionSmall_Close
+// VehicleExplosionSmall_MediumDistant
+// VehicleExplosionSmall_Distant
+// VehicleExplosionSmall_Flange
+// VehicleExplosionSmall_MetalPipe
+// VehicleExplosionSmall_Unique
+// VehicleExplosionCarMS
+// VehicleExplosionCar_MediumDistant
+// VehicleExplosionCar_Close
+// VehicleExplosionCar_Unique
+// GDI_Ox_VoiceCrash
+//
+
+// Might utilize soundAmbient/soundMoveLoop later down the line 
+// <AudioEntry Sound="PredatorIdleLoop" AudioType="soundAmbient"/>
+// <AudioEntry Sound="GDI_GuardianAPC_MoveByLoop" AudioType="soundMoveLoop"/>
+
+// Multisound is a collection of AudioEvents that can be played together, allowing for more complex and layered sound effects.
+// It's an array of different AudioEvents that can are simultaneously
+
+// <Multisound id="VehicleExplosionSmallMS">
+// 		<Subsound>VehicleExplosionSmall_Close</Subsound>
+// 		<Subsound>VehicleExplosionSmall_MediumDistant</Subsound>
+// 		<Subsound>VehicleExplosionSmall_Distant</Subsound>
+// 		<Subsound>VehicleExplosionSmall_Flange</Subsound>
+// 		<Subsound>VehicleExplosionSmall_MetalPipe</Subsound>
+// 		<Subsound>VehicleExplosionSmall_Unique</Subsound>
+// 	</Multisound>
+
+// Close, MediumDistant, Distant, Flange, MetalPipe, Unique
+// Above Multisound is when CrashType is a Barrel
+
+// AudioEvent represents a single sound event with properties like volume, pitch, delay, and control type (e.g., loop, interrupt)
+
+// ReverbEffectLevel, DryLevel, Type, MinRange, MaxRange, Priority, aren't needed
+
+
+// 	<AudioEvent id="VehicleExplosionSmall_Close" Volume="50%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+        // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Sound>WUVehic_explFGa</Sound>
+// 		<Sound>WUVehic_explFGb</Sound>
+// 		<Sound>WUVehic_explFGc</Sound>
+// 		<Sound>WUVehic_explFGd</Sound>
+// 		<Sound>WUVehic_explFGe</Sound>
+// 		<Sound>WUVehic_explFGf</Sound>
+// 		<Sound>WUVehic_explFGg</Sound>
+// 		<Sound>WUVehic_explFGh</Sound>
+// 		<Sound>WUVehic_explFGi</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionSmall_MediumDistant" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+        // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="0" High="500" />
+// 		<Sound>WUVehic_explMGa</Sound>
+// 		<Sound>WUVehic_explMGb</Sound>
+// 		<Sound>WUVehic_explMGc</Sound>
+// 		<Sound>WUVehic_explMGd</Sound>
+// 		<Sound>WUVehic_explMGe</Sound>
+// 		<Sound>WUVehic_explMGf</Sound>
+// 		<Sound>WUVehic_explMGg</Sound>
+// 		<Sound>WUVehic_explMGh</Sound>
+// 		<Sound>WUVehic_explMGi</Sound>
+// 		<Sound>WUVehic_explMGj</Sound>
+// 		<Sound>WUVehic_explMGk</Sound>
+// 		<Sound>WUVehic_explMGl</Sound>
+// 		<Sound>WUVehic_explMGm</Sound>
+// 		<Sound>WUVehic_explMGn</Sound>
+// 		<Sound>WUVehic_explMGo</Sound>
+// 		<Sound>WUVehic_explMGp</Sound>
+// 		<Sound>WUVehic_explMGq</Sound>
+// 		<Sound>WUVehic_explMGr</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionSmall_Distant" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Sound>WUVehic_explBGa</Sound>
+// 		<Sound>WUVehic_explBGb</Sound>
+// 		<Sound>WUVehic_explBGc</Sound>
+// 		<Sound>WUVehic_explBGd</Sound>
+// 		<Sound>WUVehic_explBGe</Sound>
+// 		<Sound>WUVehic_explBGf</Sound>
+// 		<Sound>WUVehic_explBGg</Sound>
+// 		<Sound>WUVehic_explBGh</Sound>
+// 		<Sound>WUVehic_explBGi</Sound>
+// 		<Sound>WUVehic_explBGj</Sound>
+// 		<Sound>WUVehic_explBGk</Sound>
+// 		<Sound>WUVehic_explBGl</Sound>
+// 		<Sound>WUVehic_explBGm</Sound>
+// 		<Sound>WUVehic_explBGn</Sound>
+// 		<Sound>WUVehic_explBGo</Sound>
+// 		<Sound>WUVehic_explBGp</Sound>
+// 		<Sound>WUVehic_explBGq</Sound>
+// 		<Sound>WUVehic_explBGr</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionSmall_Flange" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="1000" High="2000" />
+// 		<Sound>WUVehic_explFlana</Sound>
+// 		<Sound>WUVehic_explFlanb</Sound>
+// 		<Sound>WUVehic_explFlanc</Sound>
+// 		<Sound>WUVehic_explFland</Sound>
+// 		<Sound>WUVehic_explFlane</Sound>
+// 		<Sound>WUVehic_explFlanf</Sound>
+// 		<Sound>WUVehic_explFlang</Sound>
+// 		<Sound>WUVehic_explFlanh</Sound>
+// 		<Sound>WUVehic_explFlani</Sound>
+// 		<Sound>WUVehic_explFlanj</Sound>
+// 		<Sound>WUVehic_explFlank</Sound>
+// 		<Sound>WUVehic_explFlanl</Sound>
+// 		<Sound>WUVehic_explFlanm</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionSmall_MetalPipe" Volume="55%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-50" High="0" />
+// 		<Delay Low="0" High="1000" />
+// 		<Sound>WUVehic_explMetaa</Sound>
+// 		<Sound>WUVehic_explMetab</Sound>
+// 		<Sound>WUVehic_explMetac</Sound>
+// 		<Sound>WUVehic_explMetad</Sound>
+// 		<Sound>WUVehic_explMetae</Sound>
+// 		<Sound>WUVehic_explMetaf</Sound>
+// 		<Sound>WUVehic_explMetag</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionSmall_Unique" Volume="70%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="500" High="1500" />
+// 		<Sound>WUVehic_explUniqa</Sound>
+// 		<Sound>WUVehic_explUniqb</Sound>
+// 		<Sound>WUVehic_explUniqc</Sound>
+// 		<Sound>WUVehic_explUniqd</Sound>
+// 		<Sound>WUVehic_explUniqe</Sound>
+// 		<Sound>WUVehic_explUniqf</Sound>
+// 		<Sound>WUVehic_explUniqg</Sound>
+// 		<Sound>WUVehic_explUniqh</Sound>
+// 		<Sound>WUVehic_explUniqi</Sound>
+// 		<Sound>WUVehic_explUniqj</Sound>
+// 		<Sound>WUVehic_explUniqk</Sound>
+// 	</AudioEvent>
+
+// SubmixSlider is a property that determines which audio mixer group the sound belongs to, allowing for different processing and effects based on the type of sound (e.g., music, sound effects, dialogue)
+
+// SubmixSlider="SOUNDFX" -> mixerGroup = soundEffectsMixerGroup (example)
+// Could use that if audio stutter occurs from too many sounds, 
+// dividing sounds into different buffer groups, but trying to keep it simple for now
+
+// Voice Crash played when CrashType is a Vehicle
+// Similarly to VehicleExplosionCarMS
+
+// PlayPercent is a property that determines the chance of playing a sound when event triggered, but not needed here
+
+// 	<AudioEvent id="GDI_Ox_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" Type="WORLD SHROUDED VOICE EVERYONE" 
+//  MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-1" High="1" />
+// 		<Sound>GUOxTra_VoiCrasha</Sound>
+// 		<Sound>GUOxTra_VoiCrashb</Sound>
+// 		<Sound>GUOxTra_VoiCrashc</Sound>
+// 		<Sound>GUOxTra_VoiCrashd</Sound>
+// 		<Sound>GUOxTra_VoiCrashe</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionCar_MediumDistant" Volume="65%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 	<PitchShift Low="-10" High="10" />
+// 		<Delay Low="20" High="100" />
+// 		<Sound>WUVehic_explMGa</Sound>
+// 		<Sound>WUVehic_explMGb</Sound>
+// 		<Sound>WUVehic_explMGc</Sound>
+// 		<Sound>WUVehic_explMGd</Sound>
+// 		<Sound>WUVehic_explMGe</Sound>
+// 		<Sound>WUVehic_explMGf</Sound>
+// 		<Sound>WUVehic_explMGg</Sound>
+// 		<Sound>WUVehic_explMGh</Sound>
+// 		<Sound>WUVehic_explMGi</Sound>
+// 		<Sound>WUVehic_explMGj</Sound>
+// 		<Sound>WUVehic_explMGk</Sound>
+// 		<Sound>WUVehic_explMGl</Sound>
+// 		<Sound>WUVehic_explMGm</Sound>
+// 		<Sound>WUVehic_explMGn</Sound>
+// 		<Sound>WUVehic_explMGo</Sound>
+// 		<Sound>WUVehic_explMGp</Sound>
+// 		<Sound>WUVehic_explMGq</Sound>
+// 		<Sound>WUVehic_explMGr</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionCar_Close" Volume="45%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE"
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="0" High="10" />
+// 		<Sound>WUVehic_explFGa</Sound>
+// 		<Sound>WUVehic_explFGb</Sound>
+// 		<Sound>WUVehic_explFGc</Sound>
+// 		<Sound>WUVehic_explFGd</Sound>
+// 		<Sound>WUVehic_explFGe</Sound>
+// 		<Sound>WUVehic_explFGf</Sound>
+// 		<Sound>WUVehic_explFGg</Sound>
+// 		<Sound>WUVehic_explFGh</Sound>
+// 		<Sound>WUVehic_explFGi</Sound>
+// 	</AudioEvent>
+
+// 	<AudioEvent id="VehicleExplosionCar_Unique" Volume="65%" VolumeShift="-10%" Limit="3" Type="WORLD SHROUDED EVERYONE" 
+    // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 		<PitchShift Low="-10" High="10" />
+// 		<Delay Low="10" High="50" />
+// 		<Sound>WUVehic_explUniqa</Sound>
+// 		<Sound>WUVehic_explUniqb</Sound>
+// 		<Sound>WUVehic_explUniqc</Sound>
+// 		<Sound>WUVehic_explUniqd</Sound>
+// 		<Sound>WUVehic_explUniqe</Sound>
+// 		<Sound>WUVehic_explUniqf</Sound>
+// 		<Sound>WUVehic_explUniqg</Sound>
+// 		<Sound>WUVehic_explUniqh</Sound>
+// 		<Sound>WUVehic_explUniqi</Sound>
+// 		<Sound>WUVehic_explUniqj</Sound>
+// 		<Sound>WUVehic_explUniqk</Sound>
+// 	</AudioEvent>
+
+// 	<Multisound id="VehicleExplosionCarMS">
+// 		<Subsound>VehicleExplosionCar_MediumDistant</Subsound>
+// 		<Subsound>VehicleExplosionCar_Close</Subsound>
+// 		<Subsound>VehicleExplosionCar_Unique</Subsound>
+// 	</Multisound>
+
+// Hmm, might be worth added ClientBehaviors too?
+
+// ClientBehaviors are used to trigger sounds based on certain conditions, such as animations or model states. 
+// They can be used to create more dynamic and responsive audio experiences in the game. For example, a 
+// ModelConditionAudioLoopClientBehavior could be used to play a looping sound when a certain model condition is met, 
+// such as a character being paralyzed or dying. An AnimationSoundClientBehavior could be used to play specific sounds at certain frames 
+// of an animation, such as footsteps during a walking animation.
+
+// Example ClientBehaviors that could be added based on the original XML data:
+// <ClientBehaviors>
+    //     <ModelConditionAudioLoopClientBehavior id="MCALCB">
+    //         <ModelConditionSound Sound="NOD_TerrorDrone_WeaponGrinder" RequiredFlags="USER_60" ExcludedFlags="PARALYZED DYING"/>
+    //     </ModelConditionAudioLoopClientBehavior>
+    //     <AnimationSoundClientBehavior id="ModuleTag_ASCB">
+    //         <Sound Sound="GDI_Juggernaught_Footstep" Animation="GUCOLOSSUS_BIFA" Frame="0 40"/>
+    //         <Sound Sound="GDI_Juggernaught_Footstep" Animation="GUCOLOSSUS_BIFB" Frame="0 75"/>
+    //     </AnimationSoundClientBehavior>
+    // </ClientBehaviors>
+
+// Might be well fitting for TURN_LEFT and TURN_RIGHT anim trigger events for player car :D
+
+// <ModelConditionSound Sound="VEHICLE_TURN_LEFT" RequiredFlags="TURN_LEFT"/>
+
+// or maybe we can even control it further
+
+// Example anim with 11 frames
+// <Sound Sound="VEHICLE_TURN_LEFT" Animation="TURN_LEFT_ANIM" Frame="0"/>, 
+// <Sound Sound="VEHICLE_TURN_LEFT_END" Animation="TURN_LEFT_ANIM" Frame="10"/>, 
+
+// and then the AudioEvent data could be a fade in/fade out effect for the turning sound
+// TURN_LEFT having fadein, and TURN_LEFT_END having fadeout, and then the AudioManager can handle the fade effect

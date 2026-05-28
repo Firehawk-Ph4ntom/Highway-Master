@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: VehicleExplosionSmall_MetalPipe
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 081443cda8f382f4e92dbf1e50e64916, type: 3}
+  - {fileID: 8300000, guid: c59da8bddaeaa88409e4573628565379, type: 3}
+  - {fileID: 8300000, guid: 14ead44507c13e44d8428378915e639a, type: 3}
+  - {fileID: 8300000, guid: a402916ea6de4224c9f8c6f835139547, type: 3}
+  - {fileID: 8300000, guid: 3b698283af9a06d44b0f095a6724073d, type: 3}
+  - {fileID: 8300000, guid: 5d4f46c476c525548ab4b1ed56294164, type: 3}
+  - {fileID: 8300000, guid: 20cbe7b5b19782e41b4d85f19896133e, type: 3}
+  volume: 1
+  volumeShift: {x: 0, y: 0}
+  pitchShift: {x: 0, y: 0}
+  delay: {x: 0, y: 0}
+  limit: 0
+  control: 0
+  mixerGroup: {fileID: 0}

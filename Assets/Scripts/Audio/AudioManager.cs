@@ -5,7 +5,6 @@ using System.Collections.Generic;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-
     private readonly Dictionary<AudioEventData, int> activeCounts = new();
 
     private void Awake()
@@ -39,9 +38,7 @@ public class AudioManager : MonoBehaviour
             return;
 
         foreach (AudioEventData audioEvent in multiSound.audioEvents)
-        {
             Play(audioEvent);
-        }
     }
 
     private IEnumerator PlayAudioEventRoutine(AudioEventData audioEvent)
@@ -51,27 +48,17 @@ public class AudioManager : MonoBehaviour
         if (delay > 0f)
             yield return new WaitForSeconds(delay);
 
-        AudioClip clip =
-            audioEvent.clips[Random.Range(0, audioEvent.clips.Length)];
+        AudioClip clip = audioEvent.clips[Random.Range(0, audioEvent.clips.Length)];
 
-        GameObject audioObject =
-            new GameObject("AudioEvent_" + audioEvent.name);
+        GameObject audioObject = new GameObject("AudioEvent_" + audioEvent.name);
 
         AudioSource source = audioObject.AddComponent<AudioSource>();
 
         source.clip = clip;
         source.outputAudioMixerGroup = audioEvent.mixerGroup;
 
-        source.volume = Mathf.Clamp01(
-            audioEvent.volume +
-            Random.Range(audioEvent.volumeShift.x,
-                         audioEvent.volumeShift.y)
-        );
-
-        source.pitch = 1.0f + Random.Range(
-            audioEvent.pitchShift.x,
-            audioEvent.pitchShift.y
-        );
+        source.volume = Mathf.Clamp01(audioEvent.volume + Random.Range(audioEvent.volumeShift.x, audioEvent.volumeShift.y));
+        source.pitch = 1.0f + Random.Range(audioEvent.pitchShift.x, audioEvent.pitchShift.y);
 
         source.loop = audioEvent.control == AudioControl.Loop;
 
@@ -81,10 +68,7 @@ public class AudioManager : MonoBehaviour
 
         if (!source.loop)
         {
-            yield return new WaitForSeconds(
-                clip.length / Mathf.Abs(source.pitch)
-            );
-
+            yield return new WaitForSeconds(clip.length / Mathf.Abs(source.pitch));
             DecrementCount(audioEvent);
             Destroy(audioObject);
         }

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: VehicleExplosionCar_Close
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: eb4d63a33ae6c10439e6ca58f83bcaf3, type: 3}
+  - {fileID: 8300000, guid: 2dea607fbc5b3534db556620e85c7f2d, type: 3}
+  - {fileID: 8300000, guid: bc0f219c2bf3b2f4d8497e801fbf64e2, type: 3}
+  - {fileID: 8300000, guid: daae37a6fe652af42ac58a3c3c16983a, type: 3}
+  - {fileID: 8300000, guid: 7fbec05ea77178e48872a85536860af9, type: 3}
+  - {fileID: 8300000, guid: 698b6ee118e0c8846b3e8f028dcfd569, type: 3}
+  - {fileID: 8300000, guid: 07ab38dd655260e46add3d00a6d8e0da, type: 3}
+  - {fileID: 8300000, guid: 22d0da6af676a324886749ff7c1e2762, type: 3}
+  - {fileID: 8300000, guid: 61c5b065390241342a739c415b3b53be, type: 3}
+  volume: 1
+  volumeShift: {x: 0, y: 0}
+  pitchShift: {x: 0, y: 0}
+  delay: {x: 0, y: 0}
+  limit: 0
+  control: 0
+  mixerGroup: {fileID: 0}

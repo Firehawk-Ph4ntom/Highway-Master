@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: VehicleExplosionSmall_Flange
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 5b142f1a6f0d93c45b335843f1ba2423, type: 3}
+  - {fileID: 8300000, guid: 6192af868174d424bbfe2b288b6121ec, type: 3}
+  - {fileID: 8300000, guid: 43f15f2dcec41c149affdcb4e2fa0f27, type: 3}
+  - {fileID: 8300000, guid: 6a97ab38b27a87b45be642de1f962ed0, type: 3}
+  - {fileID: 8300000, guid: c037c88ad6fff7e4b88bdd6a7f61f491, type: 3}
+  - {fileID: 8300000, guid: 292fcb8d2e917d4449c28798adab2d53, type: 3}
+  - {fileID: 8300000, guid: 5884080b839f7344ab95d841b0d81e63, type: 3}
+  - {fileID: 8300000, guid: f72e39dc8b518d64f81de689550cd5cf, type: 3}
+  - {fileID: 8300000, guid: ec77c59a67f75c1499d436a4beff378e, type: 3}
+  - {fileID: 8300000, guid: 6e15afc2aa6a3234cbe57b0a0a878321, type: 3}
+  - {fileID: 8300000, guid: 715d1560f2a59dd40abf27f635bca72d, type: 3}
+  - {fileID: 8300000, guid: 3526b44289b4d514594dc0a219f31741, type: 3}
+  - {fileID: 8300000, guid: 819129818efe4a241804aa764e7e74cf, type: 3}
+  volume: 1
+  volumeShift: {x: 0, y: 0}
+  pitchShift: {x: 0, y: 0}
+  delay: {x: 0, y: 0}
+  limit: 0
+  control: 0
+  mixerGroup: {fileID: 0}
