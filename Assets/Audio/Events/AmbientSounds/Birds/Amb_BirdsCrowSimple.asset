@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
-  m_Name: Amb_BirdsCrowSquak
+  m_Name: Amb_BirdsCrowSimple
   m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
   clips:
-  - {fileID: 8300000, guid: 7a300d3db8941f24e9e65df2420900bc, type: 3}
-  - {fileID: 8300000, guid: 3a73c87e10a66584486dd8e30a3c1551, type: 3}
-  - {fileID: 8300000, guid: 60b96393d1f5ef64cbb066ee68e48a1f, type: 3}
-  - {fileID: 8300000, guid: 888b3ad9e86ce934084f36d8acf3e16f, type: 3}
-  - {fileID: 8300000, guid: 8308533188a0f064ebb3c8ed90f1f1ae, type: 3}
+  - {fileID: 8300000, guid: c4c97e450ed6a2d468bf11c8357aa8dc, type: 3}
+  - {fileID: 8300000, guid: 071894cec1d8f1047860535cc244669d, type: 3}
+  - {fileID: 8300000, guid: 7dfc2506f988f5c428bdd77364533848, type: 3}
+  - {fileID: 8300000, guid: b104d1f9a9fb53b428c6be15bb9f2962, type: 3}
+  - {fileID: 8300000, guid: 3d1d7a8dc207f584bb1c23d8e9133dc7, type: 3}
   volume: 0.7
   volumeShift: {x: -0.15, y: 0}
   pitchShift: {x: -0.05, y: 0.05}

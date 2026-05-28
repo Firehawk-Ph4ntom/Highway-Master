@@ -12,8 +12,8 @@ public class AmbientAudioEventData : MonoBehaviour
 {
     public AudioEventWeight[] ambientEvents;
 
-    public float minDelay = 3.0f;
-    public float maxDelay = 8.0f;
+    public float minDelay;
+    public float maxDelay;
 
     private void Start()
     {
@@ -55,7 +55,7 @@ public class AmbientAudioEventData : MonoBehaviour
 
         for (int i = 0; i < ambientEvents.Length; i++)
         {
-            WeightedAudioEvent entry = ambientEvents[i];
+            AudioEventWeight entry = ambientEvents[i];
 
             if (entry.audioEvent == null ||
                 entry.weight <= 0.0f)
@@ -78,7 +78,7 @@ public class AmbientAudioEventData : MonoBehaviour
 
         for (int i = 0; i < ambientEvents.Length; i++)
         {
-            WeightedAudioEvent entry = ambientEvents[i];
+            AudioEventWeight entry = ambientEvents[i];
 
             if (entry.audioEvent != null &&
                 entry.weight > 0.0f)

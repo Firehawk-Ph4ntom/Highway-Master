@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
   m_Name: GDI_Ox_VoiceCrash
   m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
-  clips: []
-  volume: 1
+  clips:
+  - {fileID: 8300000, guid: 5dbef9a2b1699c94e8f3f6de45416c15, type: 3}
+  - {fileID: 8300000, guid: 9148724690e76f144a9ed815a1ffd84d, type: 3}
+  - {fileID: 8300000, guid: 588f5bcfe55fa2c42bd9aa6bdaca737f, type: 3}
+  - {fileID: 8300000, guid: dfa24571fed91bc4187037f192a32d3a, type: 3}
+  volume: 0.7
   volumeShift: {x: 0, y: 0}
   pitchShift: {x: 0, y: 0}
   delay: {x: 0, y: 0}
-  limit: 0
+  limit: 1
   control: 0
-  mixerGroup: {fileID: 0}
+  mixerGroup: {fileID: -3680515403840671662, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

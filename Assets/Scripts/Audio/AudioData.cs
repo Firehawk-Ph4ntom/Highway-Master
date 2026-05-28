@@ -294,7 +294,8 @@
 // Time for some ambiancee
 
 // Ambient sounds can be used to create a more immersive environment in the game, such as the sound of wind and birds
-// Set to LOOP control usually
+// Set to LOOP control usually, but for this scenario it should be INTERRUPT because AudioManager is persistent,
+// 
 
 // PerFilePitchShift and PerFileVolumeShift are properties that allow for random variation in pitch and volume for each individual sound file within an AudioEvent,
 // not the entire AudioEvent, but will treat it like normal VolumeShift and PitchShift
@@ -332,7 +333,6 @@
 // </AudioEvent>
 
 // Hmm, add a crow too ig, why not
-// Crow Squak fits best here i think
 
 // <AudioEvent id="Amb_BirdsCrowSquak" Volume="70%" PerFileVolumeShift="-15%" Limit="3" Priority="LOWEST" 
 // Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" 
@@ -344,4 +344,16 @@
 // 	<Sound>WABirds_crow3c</Sound>
 // 	<Sound>WABirds_crow3d</Sound>
 // 	<Sound>WABirds_crow3e</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="Amb_BirdsCrowSimple" Volume="70%" PerFileVolumeShift="-15%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" 
+    // SubmixSlider="AMBIENT">
+//     <PerFilePitchShift Low="-5" High="5" />
+//     <Delay Low="4000" High="11000" />
+//     <Sound>WABirds_crow4a</Sound>
+//     <Sound>WABirds_crow4b</Sound>
+//     <Sound>WABirds_crow4c</Sound>
+//     <Sound>WABirds_crow4d</Sound>
+//     <Sound>WABirds_crow4e</Sound>
 // </AudioEvent>

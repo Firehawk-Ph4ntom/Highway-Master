@@ -12,11 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
   m_Name: Amb_Birds2
   m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
-  clips: []
-  volume: 1
-  volumeShift: {x: 0, y: 0}
-  pitchShift: {x: 0, y: 0}
-  delay: {x: 0, y: 0}
-  limit: 0
-  control: 0
-  mixerGroup: {fileID: 0}
+  clips:
+  - {fileID: 8300000, guid: b138af124c50cef439087e1f0b261074, type: 3}
+  - {fileID: 8300000, guid: 022e7c3ea09625c44bbe004bae4c7015, type: 3}
+  - {fileID: 8300000, guid: 3926faf88e51955449a5c6a2a373a26d, type: 3}
+  - {fileID: 8300000, guid: cfcb0df3c35534a428ee5f1f710f3387, type: 3}
+  - {fileID: 8300000, guid: 8b8e3e4af6b0c324795ec5c62ee8224a, type: 3}
+  - {fileID: 8300000, guid: 28abf0689984bff4fa5e421781578b70, type: 3}
+  - {fileID: 8300000, guid: d85723606e23a5a40ab6224415d20da0, type: 3}
+  - {fileID: 8300000, guid: ef6867cadb2769642b877f31797d2b5c, type: 3}
+  - {fileID: 8300000, guid: 6e250007ad8e5544d90f31b743adb4bc, type: 3}
+  - {fileID: 8300000, guid: b9b22321b3812874da489fbf189c4578, type: 3}
+  volume: 0.7
+  volumeShift: {x: -0.1, y: 0}
+  pitchShift: {x: -0.05, y: 0.05}
+  delay: {x: 3, y: 8}
+  limit: 3
+  control: 1
+  mixerGroup: {fileID: 3085316346858550708, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}
