@@ -60,8 +60,6 @@ public class AudioManager : MonoBehaviour
         source.volume = Mathf.Clamp01(audioEvent.volume + Random.Range(audioEvent.volumeShift.x, audioEvent.volumeShift.y));
         source.pitch = 1.0f + Random.Range(audioEvent.pitchShift.x, audioEvent.pitchShift.y);
 
-        source.loop = audioEvent.control == AudioControl.Loop;
-
         IncrementCount(audioEvent);
 
         source.Play();

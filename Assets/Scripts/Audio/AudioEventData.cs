@@ -1,14 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
-public enum AudioControl
-{
-    None,
-    Interrupt,
-    Loop,
-    Fade
-}
-
+// Instantiate Asset Menu for Audio Events
 [CreateAssetMenu(menuName = "Audio/Audio Event")]
 public class AudioEventData : ScriptableObject
 {
@@ -22,7 +15,5 @@ public class AudioEventData : ScriptableObject
     public Vector2 delay = Vector2.zero;
 
     public int limit = 0;
-    public AudioControl control = AudioControl.None;
-
     public AudioMixerGroup mixerGroup;
 }

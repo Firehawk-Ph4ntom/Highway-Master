@@ -357,3 +357,16 @@
 //     <Sound>WABirds_crow4d</Sound>
 //     <Sound>WABirds_crow4e</Sound>
 // </AudioEvent>
+
+// Winddddd
+// The following 2 events should be streamed not loaded into memory directly due to fileSize
+
+//<AmbientStream id="AmbStream_BlueZoneA_5point1" Volume="45%" Priority="CRITICAL" Type="EVERYONE" Control="RANDOMSTART ALLOW_KILL_MID_FILE" 
+// 	MinRange="3400" MaxRange="4400" DryLevel="100%" SubmixSlider="AMBIENT">
+// 	<Filename>WABlue_Zonea_5point1</Filename>
+// </AmbientStream>
+
+// <AmbientStream id="AmbStream_BlueZone03_Pristine_5point1" Volume="35%" Priority="CRITICAL" Type="EVERYONE" Control="RANDOMSTART ALLOW_KILL_MID_FILE" 
+// 	MinRange="3400" MaxRange="4400" DryLevel="100%" SubmixSlider="AMBIENT">
+// 	<Filename>WABlue_Zone03_5point1</Filename>
+// </AmbientStream>

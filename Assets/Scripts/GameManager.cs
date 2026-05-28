@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using UnityEngine.SceneManagement;
 using TMPro;
 
@@ -7,6 +8,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     private int score = 0;
     public bool gameOver = false;
+    public float gameOverDelay = 2.0f;
     public float worldSpeed = 10.0f;
 
     private void Start()
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
 
     }
 
+    // Add Score and update the Score Text
     public void AddScore()
     {
         if (!gameOver)
@@ -37,7 +40,16 @@ public class GameManager : MonoBehaviour
 
             gameOver = true;
             PlayerPrefs.SetInt("FinalScore", score);
-            SceneManager.LoadScene("GameOverScene");
+            StartCoroutine(GameOverRoutine());
         }
+    }
+
+    // Subroutine to create a small delay before loading the Game Over Scene, in order to fade out
+    // all ambient audio for a smoother transition to the Game Over Scene
+    private IEnumerator GameOverRoutine()
+    {
+        FindFirstObjectByType<AmbientStreamPlayer>().FadeOut();
+        yield return new WaitForSeconds(gameOverDelay);
+        SceneManager.LoadScene("GameOverScene");
     }
 }
