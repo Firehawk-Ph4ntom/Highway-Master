@@ -1,4 +1,4 @@
-// Audio Data based on MOD SDK's AudioEvent and Multisound structures, adapted for Unity's ScriptableObject system
+// Audio Data based on SAGE MOD SDK's AudioEvent and Multisound structures, adapted for Unity's ScriptableObject system
 // Data is just a representation of the original XML data and may not include all properties or features from the original format
 
 // Added Multisound that was used in FXList
@@ -179,6 +179,10 @@
 // 		<Sound>WUVehic_explUniqj</Sound>
 // 		<Sound>WUVehic_explUniqk</Sound>
 // 	</AudioEvent>
+
+// Added some sounds from XCC Mixer for some OOOMPH :D (Not part of SAGE Assets)
+// vgendiea, vgendieb, vgendiec, vgendied, vgendiee, vgendief
+// AudioEvent for them made similar to VehicleExplosionSmall_Close, renamed to VehicleExplosionSmall_Die
 
 // SubmixSlider is a property that determines which audio mixer group the sound belongs to, 
 // allowing for different processing and effects (like volume) based on the type of sound (e.g., music, sound effects, dialogue)

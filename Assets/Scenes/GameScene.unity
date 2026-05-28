@@ -1184,7 +1184,7 @@ MonoBehaviour:
   - prefab: {fileID: 706730761093982421, guid: e6ba2b816bfe6ed48a755bd4dd9d2e2d, type: 3}
     spawnWeight: 5
   - prefab: {fileID: 5072976128816218964, guid: 54818b42ed8bf35419ff0b0276ffc100, type: 3}
-    spawnWeight: 88
+    spawnWeight: 3
   - prefab: {fileID: 6003723229909440145, guid: 44b6a524974762149be87f309f1a6519, type: 3}
     spawnWeight: 1
   minObstaclesPerWave: 1

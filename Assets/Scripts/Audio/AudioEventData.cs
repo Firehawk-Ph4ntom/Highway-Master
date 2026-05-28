@@ -14,6 +14,8 @@ public class AudioEventData : ScriptableObject
     public Vector2 pitchShift = Vector2.zero;
     public Vector2 delay = Vector2.zero;
 
+    public bool loop = false;
+
     public int limit = 0;
     public AudioMixerGroup mixerGroup;
 }
