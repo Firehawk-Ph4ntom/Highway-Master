@@ -174,17 +174,26 @@
 // Voice Crash played when CrashType is a Vehicle
 // Similarly to VehicleExplosionCarMS
 
-// PlayPercent is a property that determines the chance of playing a sound when event triggered, but not needed here
+// PlayPercent is a property that determines the chance of playing a sound when event triggered, but I don't want it here
 
 // 	<AudioEvent id="GDI_Ox_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" Type="WORLD SHROUDED VOICE EVERYONE" 
 //  MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="VOICE">
 // 		<PitchShift Low="-1" High="1" />
-// 		<Sound>GUOxTra_VoiCrasha</Sound>
-// 		<Sound>GUOxTra_VoiCrashb</Sound>
-// 		<Sound>GUOxTra_VoiCrashc</Sound>
-// 		<Sound>GUOxTra_VoiCrashd</Sound>
-// 		<Sound>GUOxTra_VoiCrashe</Sound>
+// 		<Sound>GUOxTra_VoiCrasha</Sound> // WE'RE LOSING CONTROL!
+// 		// <Sound>GUOxTra_VoiCrashb</Sound> // WE'RE GOING DOWN! < -- This one is an odd line to use here, the whole audioevent is about the pilot screaming about his aicraft crashing down,
+                                                    // but we have a ground vehicle here not an aircraft, it'd just sound weird
+// 		<Sound>GUOxTra_VoiCrashc</Sound> // I KNEW THIS WOULD HAPPEN!
+// 		<Sound>GUOxTra_VoiCrashd</Sound> // NOOOOO!
+// 		<Sound>GUOxTra_VoiCrashe</Sound> // OH NO!.. OH NOO!
 // 	</AudioEvent>
+
+// Better than Using Verti sounds :
+// <AudioEvent id="NOD_VertigoBomber_VoiceCrash" Volume="70%" PlayPercent="30%" Limit="1" Priority="LOW" Type="WORLD SHROUDED VOICE EVERYONE" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-1" High="1" />
+//     <Sound>NuVerti_VoiCrasha</Sound> // IT'S OVER!
+//     <Sound>NuVerti_VoiCrashb</Sound> // NO NO.. NOO!!
+//     <Sound>NuVerti_VoiCrashc</Sound> // whoops <-- le funni line that could be used as easter egg joke when hitting a barrel
+// </AudioEvent>
 
 // 	<AudioEvent id="VehicleExplosionCar_Close" Volume="45%" VolumeShift="-15%" Limit="3" Type="WORLD SHROUDED EVERYONE"
     // Control="INTERRUPT" MinRange="200" MaxRange="800" ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
