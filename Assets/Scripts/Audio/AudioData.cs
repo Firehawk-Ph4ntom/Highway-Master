@@ -522,4 +522,144 @@
 //     <Sound>WImpac_bodyfalll</Sound>
 //     <Sound>WImpac_bodyfallm</Sound>
 //     <Sound>WImpac_bodyfalln</Sound>
+// </AudioEvent>\
+
+// Loop Sounds for cars' engines
+
+// Car A
+// <AudioEvent id="NOD_AttackBike_IdleLoop" Volume="60%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="250"
+    //  ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Sound>NUAttac_idleLoopa</Sound>
+//     <Sound>NUAttac_idleLoopb</Sound>
+//     <Sound>NUAttac_idleLoopc</Sound>
+//     <Sound>NUAttac_idleLoopd</Sound>
+//     <Sound>NUAttac_idleLoope</Sound>
+//     <Sound>NUAttac_idleLoopf</Sound>
+//     <Sound>NUAttac_idleLoopg</Sound>
+//     <Sound>NUAttac_idleLooph</Sound>
+//     <Sound>NUAttac_idleLoopi</Sound>
+//     <Sound>NUAttac_idleLoopj</Sound>
+//     <Sound>NUAttac_idleLoopk</Sound>
+//     <Sound>NUAttac_idleLoopl</Sound>
+//     <Sound>NUAttac_idleLoopm</Sound>
+//     <Sound>NUAttac_idleLoopn</Sound>
+//     <Sound>NUAttac_idleLoopo</Sound>
+//     <Sound>NUAttac_idleLoopp</Sound>
+//     <Sound>NUAttac_idleLoopq</Sound>
+//     <Sound>NUAttac_idleLoopr</Sound>
+//     <Sound>NUAttac_idleLoops</Sound>
+//     <Sound>NUAttac_idleLoopt</Sound>
+// </AudioEvent>
+
+// Car B
+// <AudioEvent id="NOD_ScorpionTank_IdleLoop" Volume="27%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// 	Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="250"
+// 	 ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+// 	<PitchShift Low="-5" High="5" />
+// 	<Sound>NUScorp_idleLoopa</Sound>
+// 	<Sound>NUScorp_idleLoopb</Sound>
+// 	<Sound>NUScorp_idleLoopc</Sound>
+// 	<Sound>NUScorp_idleLoopd</Sound>
+// </AudioEvent>
+
+// Motorcycle 
+// <AudioEvent id="NOD_RaiderBuggy_IdleLoop" Volume="25%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="250" ReverbEffectLevel="100%" 
+// DryLevel="100%" SubmixSlider="SOUNDFX">
+// 	<PitchShift Low="-5" High="5" />
+// 	<Sound>NURaide_idleLoopa</Sound>
+// 	<Sound>NURaide_idleLoopb</Sound>
+// 	<Sound>NURaide_idleLoopc</Sound>
+// 	<Sound>NURaide_idleLoopd</Sound>
+// 	<Sound>NURaide_idleLoope</Sound>
+// 	<Sound>NURaide_idleLoopf</Sound>
+// 	<Sound>NURaide_idleLoopg</Sound>
+// 	<Sound>NURaide_idleLooph</Sound>
+// </AudioEvent>
+
+// Jeep A
+// <AudioEvent id="GDI_Surveyor_IdleLoop" Volume="30%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="250" ReverbEffectLevel="100%" 
+// DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Sound>GUSurve_idleLoopa</Sound>
+//     <Sound>GUSurve_idleLoopb</Sound>
+//     <Sound>GUSurve_idleLoopc</Sound>
+//     <Sound>GUSurve_idleLoopd</Sound>
+//     <Sound>GUSurve_idleLoope</Sound>
+//     <Sound>GUSurve_idleLoopf</Sound>
+//     <Sound>GUSurve_idleLoopg</Sound>
+// </AudioEvent>
+
+// Jeep B
+// <AudioEvent id="GDI_Marv_IdleLoop" Volume="45%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="250" ReverbEffectLevel="100%" 
+// DryLevel="100%" SubmixSlider="SOUNDFX">
+// 	<PitchShift Low="-5" High="5" />
+// 	<Sound>GUMarv_idleLoopa</Sound>
+// 	<Sound>GUMarv_idleLoopb</Sound>
+// 	<Sound>GUMarv_idleLoopc</Sound>
+// 	<Sound>GUMarv_idleLoopd</Sound>
+// 	<Sound>GUMarv_idleLoope</Sound>
+// </AudioEvent>
+
+// Pickup truck
+// <AudioEvent id="NOD_Reckoner_IdleLoop" Volume="30%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="100" MaxRange="300" ReverbEffectLevel="100%" 
+// DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-10" High="10" />
+//     <Sound>NURecko_idleLoopa</Sound>
+//     <Sound>NURecko_idleLoopb</Sound>
+//     <Sound>NURecko_idleLoopc</Sound>
+// </AudioEvent>
+
+// Bus
+// <AudioEvent id="GDI_RepairAPC_IdleLoop" Volume="45%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="100" MaxRange="300" ReverbEffectLevel="100%" 
+// DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Sound>GURepai_idleLoopa</Sound>
+//     <Sound>GURepai_idleLoopb</Sound>
+//     <Sound>GURepai_idleLoopc</Sound>
+//     <Sound>GURepai_idleLoopd</Sound>
+//     <Sound>GURepai_idleLoope</Sound>
+//     <Sound>GURepai_idleLoopf</Sound>
+//     <Sound>GURepai_idleLoopg</Sound>
+// </AudioEvent>
+
+// trailer truck
+// <AudioEvent id="GDI_PredatorTank_IdleLoop" Volume="18%" VolumeShift="-5%" Limit="3" Priority="LOWEST" Type="WORLD SHROUDED EVERYONE" 
+// Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="250" ReverbEffectLevel="100%" DryLevel="100%" 
+// SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Sound>GUPreda_idleL2a</Sound>
+//     <Sound>GUPreda_idleL2b</Sound>
+//     <Sound>GUPreda_idleL2c</Sound>
+//     <Sound>GUPreda_idleL2d</Sound>
+//     <Sound>GUPreda_idleL2e</Sound>
+//     <Sound>GUPreda_idleL2f</Sound>
+//     <Sound>GUPreda_idleL2g</Sound>
+//     <Sound>GUPreda_idleL2h</Sound>
+//     <Sound>GUPreda_idleL2i</Sound>
+//     <Sound>GUPreda_idleL2j</Sound>
+//     <Sound>GUPreda_idleL2k</Sound>
+//     <Sound>GUPreda_idleL2l</Sound>
+// </AudioEvent>
+
+// oil tanker truck
+// <AudioEvent id="NOD_FlameTank_IdleLoop" Volume="40%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+// Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="30" MaxRange="350" ReverbEffectLevel="100%"
+// DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5" />
+//     <Sound>NUFlame_idleLoopa</Sound>
+//     <Sound>NUFlame_idleLoopb</Sound>
+//     <Sound>NUFlame_idleLoopc</Sound>
+//     <Sound>NUFlame_idleLoopd</Sound>
+//     <Sound>NUFlame_idleLoope</Sound>
+//     <Sound>NUFlame_idleLoopf</Sound>
+//     <Sound>NUFlame_idleLoopg</Sound>
+//     <Sound>NUFlame_idleLooph</Sound>
+//     <Sound>NUFlame_idleLoopi</Sound>
 // </AudioEvent>
