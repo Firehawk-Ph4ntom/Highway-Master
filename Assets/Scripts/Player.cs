@@ -97,10 +97,15 @@ public class Player : MonoBehaviour
     // Subroutine that handles Obstacle wave spawning based on delays set
     private IEnumerator SpawnRoutine()
     {
+
+        // Make sure gameStarted is true before executing
+        while (!FindFirstObjectByType<GameManager>().gameStarted)
+            yield return null;
+
         // A bit of an initial delay before the first wave starts
         yield return new WaitForSeconds(initialSpawnDelay);
 
-        while (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
+        while (!FindFirstObjectByType<GameManager>().gameOver)
         {
             SpawnWave();
             float delay = Random.Range(minSpawnInterval, maxSpawnInterval);

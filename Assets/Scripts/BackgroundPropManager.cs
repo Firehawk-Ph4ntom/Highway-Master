@@ -28,7 +28,11 @@ public class BackgroundPropManager : MonoBehaviour
     // Subroutine that handles Prop spawning based on a random delay
     private IEnumerator SpawnRoutine()
     {
-        while (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
+        // Make sure gameStarted is true before executing
+        while (!FindFirstObjectByType<GameManager>().gameStarted)
+            yield return null;
+        
+        while (!FindFirstObjectByType<GameManager>().gameOver)
         {
             SpawnProp();
             float delay = Random.Range(minSpawnDelay, maxSpawnDelay);
