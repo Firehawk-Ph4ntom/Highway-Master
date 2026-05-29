@@ -1170,21 +1170,25 @@ MonoBehaviour:
   - 2.8
   obstacleSpawnData:
   - prefab: {fileID: 8824832986119816886, guid: 8e1123868891a8d4c8990f4ec7c5b07f, type: 3}
-    spawnWeight: 24
+    spawnWeight: 20
   - prefab: {fileID: 7975680495767670633, guid: b19faa83ae4de6a4db532e3ef4862d63, type: 3}
     spawnWeight: 20
   - prefab: {fileID: 8118336777554989676, guid: d0f56317a5dedf24f9ae35e3443c700c, type: 3}
-    spawnWeight: 18
+    spawnWeight: 14
   - prefab: {fileID: 4414702972513898357, guid: bd68501a8b519924a9c3f80db53b76ed, type: 3}
     spawnWeight: 14
   - prefab: {fileID: 7522033284155033491, guid: e8916b6ebcc2d4f4ca2fdb0168f915e6, type: 3}
-    spawnWeight: 10
-  - prefab: {fileID: 3904484536832859782, guid: e5cd5da0436ae6141b842d762ab584d5, type: 3}
+    spawnWeight: 12
+  - prefab: {fileID: 3451680503896323492, guid: 30ae17989c6438c40bf0ffdaa788216e, type: 3}
+    spawnWeight: 8
+  - prefab: {fileID: 7665784525075290286, guid: 2283730090961e2449fa2beb986125a3, type: 3}
     spawnWeight: 7
-  - prefab: {fileID: 706730761093982421, guid: e6ba2b816bfe6ed48a755bd4dd9d2e2d, type: 3}
-    spawnWeight: 5
-  - prefab: {fileID: 5072976128816218964, guid: 54818b42ed8bf35419ff0b0276ffc100, type: 3}
+  - prefab: {fileID: 3904484536832859782, guid: e5cd5da0436ae6141b842d762ab584d5, type: 3}
     spawnWeight: 3
+  - prefab: {fileID: 706730761093982421, guid: e6ba2b816bfe6ed48a755bd4dd9d2e2d, type: 3}
+    spawnWeight: 3
+  - prefab: {fileID: 5072976128816218964, guid: 54818b42ed8bf35419ff0b0276ffc100, type: 3}
+    spawnWeight: 2
   - prefab: {fileID: 6003723229909440145, guid: 44b6a524974762149be87f309f1a6519, type: 3}
     spawnWeight: 1
   minObstaclesPerWave: 1

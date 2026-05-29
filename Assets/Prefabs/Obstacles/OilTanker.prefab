@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3295426686110951573}
   - component: {fileID: -8046328604959008284}
   - component: {fileID: -7674079640774438939}
+  - component: {fileID: 4778833996368604754}
   m_Layer: 3
   m_Name: OilTanker
   m_TagString: VehicleObstacle
@@ -188,3 +189,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 6752b5019f648c7468abb6ab38469a07, type: 3}
   - {fileID: 21300000, guid: d475eab8c4d29ce4d82798ef1dd5cf76, type: 3}
   - {fileID: 21300000, guid: 5d5da4487fe6441458a0ef7d2fc4b47d, type: 3}
+--- !u!114 &4778833996368604754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 706730761093982421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284a4caa4da21594bb6006ee5fc0087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioLoopClientBehavior
+  audioEvent: {fileID: 11400000, guid: 0a3f40a8486c0084f9fb4e8e3988d76b, type: 2}

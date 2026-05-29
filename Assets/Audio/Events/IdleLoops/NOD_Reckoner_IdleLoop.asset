@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: NOD_Reckoner_IdleLoop
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 57f8460024f3bf14c8ba006e5f180787, type: 3}
+  - {fileID: 8300000, guid: 636c57061f10ce84e81644b372f9c628, type: 3}
+  - {fileID: 8300000, guid: 4574ae2308cc49740aa085d4af6f1e02, type: 3}
+  volume: 0.3
+  volumeShift: {x: -0.05, y: 0}
+  pitchShift: {x: -0.5, y: 0.5}
+  delay: {x: 0, y: 0}
+  loop: 1
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -4078010970843707386}
   - component: {fileID: -518796291026620391}
   - component: {fileID: -2164241520021280910}
+  - component: {fileID: -4402498166892015348}
   m_Layer: 3
   m_Name: TrailerTruck
   m_TagString: VehicleObstacle
@@ -188,3 +189,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 71dee610809be0c4085a78cd36d9d5fc, type: 3}
   - {fileID: 21300000, guid: f8096c33b0657ca43b7a249e8c927b03, type: 3}
   - {fileID: 21300000, guid: 349610acd25295340b5d1ad318c4784b, type: 3}
+--- !u!114 &-4402498166892015348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3904484536832859782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284a4caa4da21594bb6006ee5fc0087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioLoopClientBehavior
+  audioEvent: {fileID: 11400000, guid: 42c34ee4663742a4b9d42fd021ebaf26, type: 2}

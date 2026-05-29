@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: NOD_FlameTank_IdleLoop
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: decac9b4e8e02294c9f33942e53a32bc, type: 3}
+  - {fileID: 8300000, guid: b17cc2e5f377fc542888dbc0f6184a2c, type: 3}
+  - {fileID: 8300000, guid: 1ca5e30ff75bceb458011ab426a64e29, type: 3}
+  - {fileID: 8300000, guid: 8b2d65c0e9497c24d9d30ae5858169ec, type: 3}
+  - {fileID: 8300000, guid: ca02932bcdd119c4e8271eccf949b64c, type: 3}
+  - {fileID: 8300000, guid: fc1c577ce5a8a904d9f0a397c4a7d63d, type: 3}
+  - {fileID: 8300000, guid: 369baf674f7c24c42b3ac69b3a8d7c3f, type: 3}
+  - {fileID: 8300000, guid: 5383dcfbf8963d148ae222a530684b8e, type: 3}
+  - {fileID: 8300000, guid: 4e4a36de7256e454ebf086b4c34333ed, type: 3}
+  volume: 0.4
+  volumeShift: {x: -0.05, y: 0}
+  pitchShift: {x: -0.5, y: 0.5}
+  delay: {x: 0, y: 0}
+  loop: 1
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}
