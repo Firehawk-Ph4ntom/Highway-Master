@@ -33,22 +33,4 @@ public class GameOverMenu : MonoBehaviour
     {
 
     }
-
-    // Reload the Game Scene
-    public void Restart()
-    {
-        SceneManager.LoadScene("GameScene");
-    }
-
-    // Go back to the Main Menu Scene
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("MainMenuScene");
-    }
-
-    // Quit the Application
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
 }
