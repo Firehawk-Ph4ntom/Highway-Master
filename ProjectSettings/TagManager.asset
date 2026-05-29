@@ -15,7 +15,7 @@ TagManager:
   - Object
   - Water
   - UI
-  - 
+  - Sky
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Object
     uniqueID: 3512076721
+    locked: 0
+  - name: Sky
+    uniqueID: 3686741275
     locked: 0
   m_RenderingLayers:
   - Default
