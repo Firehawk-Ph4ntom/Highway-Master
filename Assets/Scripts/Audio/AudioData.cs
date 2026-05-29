@@ -14,6 +14,7 @@
 // VehicleExplosionSmallMS
 // VehicleExplosionSmall_Close
 // VehicleExplosionSmall_Distant
+// VehicleExplosionSmall_ExplosionAmplifier
 // VehicleExplosionSmall_Flange
 // VehicleExplosionSmall_MediumDistant
 // VehicleExplosionSmall_MetalPipe
@@ -26,6 +27,7 @@
 // AmbStream_BlueZoneA_5point1
 // AmbStream_BlueZone03_Pristine_5point1
 // Amb_WoodCreakTree1
+// Amb_WoodShutter
 
 // SmallGenericBuilding_Die_MS
 // SmallGenericBuilding_Explosion
@@ -35,7 +37,20 @@
 // SmallGenericBuilding_WoodExplosion_Delayed
 
 // Amb_DirtFall
+// Amb_RockTumbleMedium
+// Bodyfall
+// BodyDirt
 
+// NOD_AttackBike_IdleLoop
+// NOD_ScorpionTank_IdleLoop
+// NOD_RaiderBuggy_IdleLoop
+// GDI_Surveyor_IdleLoop
+// GDI_Marv_IdleLoop
+// NOD_Reckoner_IdleLoop
+// GDI_RepairAPC_IdleLoop
+// GDI_PredatorTank_IdleLoop
+// NOD_FlameTank_IdleLoop
+// GDI_Slingshot_IdleLoop
 
 // Gonna keep the same names for better reference
 
@@ -182,7 +197,7 @@
 
 // Added some sounds from XCC Mixer for some OOOMPH :D (Not part of SAGE Assets)
 // vgendiea, vgendieb, vgendiec, vgendied, vgendiee, vgendief
-// AudioEvent for them made similar to VehicleExplosionSmall_Close, renamed to VehicleExplosionSmall_Die
+// AudioEvent for them made similar to VehicleExplosionSmall_Close, renamed to VehicleExplosionSmall_ExplosionAmplifier
 
 // SubmixSlider is a property that determines which audio mixer group the sound belongs to, 
 // allowing for different processing and effects (like volume) based on the type of sound (e.g., music, sound effects, dialogue)
@@ -349,6 +364,21 @@
 //     <Sound>WACreak_tree1_l</Sound>
 //     <Sound>WACreak_tree1_m</Sound>
 //     <Sound>WACreak_tree1_n</Sound>
+// </AudioEvent>
+
+// <AudioEvent id="Amb_WoodShutter" Volume="70%" PerFileVolumeShift="-15%" Limit="3" Priority="LOWEST" 
+    // Type="WORLD SHROUDED EVERYONE" Control="LOOP" MinRange="400" MaxRange="900" ReverbEffectLevel="100%" DryLevel="100%" 
+    // SubmixSlider="AMBIENT">
+//     <PerFilePitchShift Low="-10" High="5" />
+//     <Delay Low="3000" High="8000" />
+//     <Sound>WAwood_shuttera</Sound>
+//     <Sound>WAwood_shutterb</Sound>
+//     <Sound>WAwood_shutterc</Sound>
+//     <Sound>WAwood_shutterd</Sound>
+//     <Sound>WAwood_shuttere</Sound>
+//     <Sound>WAwood_shutterf</Sound>
+//     <Sound>WAwood_shutterg</Sound>
+//     <Sound>WAwood_shutterh</Sound>
 // </AudioEvent>
 
 //0-------------------
