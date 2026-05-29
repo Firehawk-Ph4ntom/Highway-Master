@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: Amb_WoodShutter
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 585b88da896e6834aa5ebcddb5aab187, type: 3}
+  - {fileID: 8300000, guid: 6c2802791dfecac4996a6cebe7232fd9, type: 3}
+  - {fileID: 8300000, guid: a36fd275588fd424c81b661f550ad068, type: 3}
+  - {fileID: 8300000, guid: b1816114ecb12df429a62cf9836e900f, type: 3}
+  - {fileID: 8300000, guid: d00ee8d693109574b9929535a44233c3, type: 3}
+  - {fileID: 8300000, guid: ca7fc2295016220468f860d85d417bec, type: 3}
+  - {fileID: 8300000, guid: 1a50365883a39584c818a5b87ae11cc1, type: 3}
+  - {fileID: 8300000, guid: 2b2dec3e506dc2d4787ff1ba940fbbf2, type: 3}
+  volume: 0.7
+  volumeShift: {x: -0.15, y: 0}
+  pitchShift: {x: -0.1, y: 0.05}
+  delay: {x: 0, y: 3}
+  loop: 0
+  limit: 3
+  mixerGroup: {fileID: 3085316346858550708, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

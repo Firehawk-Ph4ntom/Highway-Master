@@ -141,8 +141,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48382d88cf3b12c45891b0cc4e648f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AmbientAudioEventData
-  ambientEvents:
+  ambientAudioEventWeightData:
   - audioEvent: {fileID: 11400000, guid: 9d280cfc558d6a545a0f1ada63ca1c8a, type: 2}
-    weight: 100
+    playWeight: 40
+  - audioEvent: {fileID: 11400000, guid: 6d0d1ee39a9e27646bd3c0732391fb4b, type: 2}
+    playWeight: 25
   minDelay: 1
   maxDelay: 3
