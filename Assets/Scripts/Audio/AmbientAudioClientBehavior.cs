@@ -9,7 +9,7 @@ public class AmbientAudioEventWeightData
     public float playWeight = 1.0f;
 }
 
-public class AmbientAudioEventData : MonoBehaviour
+public class AmbientAudioClientBehavior : MonoBehaviour
 {
     public AmbientAudioEventWeightData[] ambientAudioEventWeightData;
 
