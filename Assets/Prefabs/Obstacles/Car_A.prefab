@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: -8935741924613423541}
   - component: {fileID: 984149883594808929}
   - component: {fileID: -4882260033557503203}
+  - component: {fileID: -3070959008301465715}
   m_Layer: 3
   m_Name: Car_A
   m_TagString: VehicleObstacle
@@ -188,3 +189,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 637cf16500c6b19479741b8a0e1e2716, type: 3}
   - {fileID: 21300000, guid: 04e33255988e4634d897144f3363ce31, type: 3}
   - {fileID: 21300000, guid: ba646687bb176884f9f7a4e275a9e30a, type: 3}
+--- !u!114 &-3070959008301465715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8824832986119816886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284a4caa4da21594bb6006ee5fc0087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClientBehavior
+  audioEvent: {fileID: 11400000, guid: af4170be1dd949c4b963f17bd3d53424, type: 2}

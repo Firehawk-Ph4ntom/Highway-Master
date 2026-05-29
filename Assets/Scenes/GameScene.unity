@@ -1142,8 +1142,9 @@ GameObject:
   - component: {fileID: 1592689142}
   - component: {fileID: 1592689141}
   - component: {fileID: 1592689146}
-  - component: {fileID: 1592689139}
   - component: {fileID: 1592689145}
+  - component: {fileID: 1592689139}
+  - component: {fileID: 1592689147}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1476,6 +1477,19 @@ PolygonCollider2D:
       - {x: -0.14999999, y: -3.26}
       - {x: 0.13, y: -3.26}
   m_UseDelaunayMesh: 1
+--- !u!114 &1592689147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592689138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284a4caa4da21594bb6006ee5fc0087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClientBehavior
+  audioEvent: {fileID: 11400000, guid: 540941e94557f744ab5ccb2a3c436b91, type: 2}
 --- !u!1 &1819596797
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3268690696720010460}
   - component: {fileID: 8062954886925451}
   - component: {fileID: 3581137001550582759}
+  - component: {fileID: 8329455025322144998}
   m_Layer: 3
   m_Name: MotorCycle
   m_TagString: VehicleObstacle
@@ -270,3 +271,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: eecf2ffeb8b336d4f8299db423717693, type: 3}
   - {fileID: 21300000, guid: 7722490b06551464e9976580745c46f7, type: 3}
   - {fileID: 21300000, guid: 0f1eeaf01c9a8344eae11d84dae5e525, type: 3}
+--- !u!114 &8329455025322144998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3451680503896323492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284a4caa4da21594bb6006ee5fc0087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClientBehavior
+  audioEvent: {fileID: 11400000, guid: ad970b9d3b22c2e459e25ae9f843ec84, type: 2}

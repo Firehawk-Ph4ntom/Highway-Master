@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: GDI_Surveyor_IdleLoop
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 5c555d2c245b9a14097c414f660ad635, type: 3}
+  - {fileID: 8300000, guid: 847284873fee2604ba67452b6342d2a1, type: 3}
+  - {fileID: 8300000, guid: f190fd0eedc36bf4da45e040792cc029, type: 3}
+  - {fileID: 8300000, guid: a031b81f45ab24742a247230a6467113, type: 3}
+  - {fileID: 8300000, guid: ba83e1d4924814643bf29be4615b6d02, type: 3}
+  - {fileID: 8300000, guid: 108d937aa834cf74daca4e60cf88586a, type: 3}
+  - {fileID: 8300000, guid: 6da45b2ac9900bf43bbbd235788f19f5, type: 3}
+  volume: 0.12
+  volumeShift: {x: -0.05, y: 0}
+  pitchShift: {x: -0.05, y: 0.05}
+  delay: {x: 0, y: 0}
+  loop: 1
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

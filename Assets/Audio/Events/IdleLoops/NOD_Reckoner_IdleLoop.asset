@@ -16,9 +16,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 57f8460024f3bf14c8ba006e5f180787, type: 3}
   - {fileID: 8300000, guid: 636c57061f10ce84e81644b372f9c628, type: 3}
   - {fileID: 8300000, guid: 4574ae2308cc49740aa085d4af6f1e02, type: 3}
-  volume: 0.3
+  volume: 0.1
   volumeShift: {x: -0.05, y: 0}
-  pitchShift: {x: -0.5, y: 0.5}
+  pitchShift: {x: -0.05, y: 0.05}
   delay: {x: 0, y: 0}
   loop: 1
   limit: 3

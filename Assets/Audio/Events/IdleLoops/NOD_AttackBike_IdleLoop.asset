@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: NOD_AttackBike_IdleLoop
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 52853b5b44be1394a98681ce43881441, type: 3}
+  - {fileID: 8300000, guid: 8b12726f04c45784a8dda9de1cac1321, type: 3}
+  - {fileID: 8300000, guid: f0d886cb59f059244a289a1a6015b2df, type: 3}
+  - {fileID: 8300000, guid: 51de0de0586a3304198485044b72e5e2, type: 3}
+  - {fileID: 8300000, guid: e3a84dd0d2944244284fde924ade1c4a, type: 3}
+  - {fileID: 8300000, guid: 7df87f87a901e534fa9fc4b18fa33092, type: 3}
+  - {fileID: 8300000, guid: ad4ca8a19857ed74aadc77385ce24d34, type: 3}
+  - {fileID: 8300000, guid: 27bb1bb91a3e8fc4fbb79b785a86dae0, type: 3}
+  - {fileID: 8300000, guid: e2ea5efb642502c48a9e21cce500e80f, type: 3}
+  - {fileID: 8300000, guid: cccbca845ea55e4478df0416c0986345, type: 3}
+  - {fileID: 8300000, guid: 195afee895529be4ab90278c2c264da7, type: 3}
+  - {fileID: 8300000, guid: 90c19c4c842a5ff42aec974809145170, type: 3}
+  - {fileID: 8300000, guid: a330a25fab2e42f46bb12b2b2a4985e6, type: 3}
+  - {fileID: 8300000, guid: a88c86d7045ed16458c5583251d60c9c, type: 3}
+  - {fileID: 8300000, guid: 63af6c0d05f3aed4e9dc5f202471225c, type: 3}
+  - {fileID: 8300000, guid: a774b514bd0040c4786f26a3990bf559, type: 3}
+  - {fileID: 8300000, guid: 3655c3f9b8002484f830496c29fa6132, type: 3}
+  - {fileID: 8300000, guid: 0d03e7471f3c82e4c9e5ad240a2781f2, type: 3}
+  - {fileID: 8300000, guid: c327594491f5a3140a4377d0f7263dc9, type: 3}
+  - {fileID: 8300000, guid: b58fe88bcda891d4c9eec04b791c0c63, type: 3}
+  volume: 0.25
+  volumeShift: {x: -0.05, y: 0}
+  pitchShift: {x: -0.05, y: 0.05}
+  delay: {x: 0, y: 0}
+  loop: 1
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: NOD_RaiderBuggy_IdleLoop
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: a140b25dbfbfe3649ab1ccf4328308df, type: 3}
+  - {fileID: 8300000, guid: a85464f39fa5cb24da6c7b30124c626a, type: 3}
+  - {fileID: 8300000, guid: 9388dcafa67f34e478fab3594ac69eda, type: 3}
+  - {fileID: 8300000, guid: e6ec0f16aae2fc945baab89525f06660, type: 3}
+  - {fileID: 8300000, guid: f1165a087bcff694fa85c550317d630b, type: 3}
+  - {fileID: 8300000, guid: 03a303ff7dbf70e489009118a9b8159a, type: 3}
+  - {fileID: 8300000, guid: c435f36cdd263794289ebc166dd4c2d8, type: 3}
+  - {fileID: 8300000, guid: efb2bd4b68d37b347b611f557bd77cd9, type: 3}
+  volume: 0.2
+  volumeShift: {x: -0.05, y: 0}
+  pitchShift: {x: -0.05, y: 0.05}
+  delay: {x: 0, y: 0}
+  loop: 1
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

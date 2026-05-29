@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 506982597692647473}
   - component: {fileID: 8493353781320203395}
   - component: {fileID: -6308254641008764338}
+  - component: {fileID: -8505362734131802821}
   m_Layer: 3
   m_Name: Jeep_A
   m_TagString: VehicleObstacle
@@ -188,3 +189,16 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 38f8e1a55e262d6409da2cc395489f69, type: 3}
   - {fileID: 21300000, guid: 6140b488d011c8c40b68847c2f31cc36, type: 3}
   - {fileID: 21300000, guid: b144319c5144d2d4c825e2d3c797ac20, type: 3}
+--- !u!114 &-8505362734131802821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8118336777554989676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284a4caa4da21594bb6006ee5fc0087d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioClientBehavior
+  audioEvent: {fileID: 11400000, guid: 0da070bce5c613b43b0c18fb4b0662f1, type: 2}

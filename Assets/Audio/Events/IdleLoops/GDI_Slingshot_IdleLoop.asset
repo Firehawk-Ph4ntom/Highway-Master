@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f35a7b49081e86418c6fb62c5031acd, type: 3}
+  m_Name: GDI_Slingshot_IdleLoop
+  m_EditorClassIdentifier: Assembly-CSharp::AudioEventData
+  clips:
+  - {fileID: 8300000, guid: 05e7478a7edd59a4c938728113f0f6bc, type: 3}
+  - {fileID: 8300000, guid: 9df12cac2cb80b04c9fafb424843c57f, type: 3}
+  - {fileID: 8300000, guid: 81393c5047dd56546810f9a8f9958ae9, type: 3}
+  - {fileID: 8300000, guid: d3d939c50e3126d4c97773b94af84166, type: 3}
+  - {fileID: 8300000, guid: 77c194ea823d44d4c8c943f9a7fa6261, type: 3}
+  - {fileID: 8300000, guid: 9966148764dde6f42affcf218435bcd6, type: 3}
+  volume: 0.08
+  volumeShift: {x: -0.05, y: 0}
+  pitchShift: {x: -0.05, y: 0.05}
+  delay: {x: 0, y: 0}
+  loop: 1
+  limit: 3
+  mixerGroup: {fileID: -8227145710578202894, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

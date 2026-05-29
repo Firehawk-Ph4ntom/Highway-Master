@@ -663,3 +663,16 @@
 //     <Sound>NUFlame_idleLooph</Sound>
 //     <Sound>NUFlame_idleLoopi</Sound>
 // </AudioEvent>
+
+//Player car
+// <AudioEvent id="GDI_Slingshot_IdleLoop" Volume="40%" VolumeShift="-5%" Limit="3" Priority="LOWEST" 
+    // Type="WORLD SHROUDED EVERYONE" Control="LOOP FADE_ON_KILL FADE_ON_START" MinRange="100" MaxRange="300" 
+    // ReverbEffectLevel="100%" DryLevel="100%" SubmixSlider="SOUNDFX">
+//     <PitchShift Low="-5" High="5"/>
+//     <Sound>GUSling_idleLoopa</Sound>
+//     <Sound>GUSling_idleLoopb</Sound>
+//     <Sound>GUSling_idleLoopc</Sound>
+//     <Sound>GUSling_idleLoopd</Sound>
+//     <Sound>GUSling_idleLoope</Sound>
+//     <Sound>GUSling_idleLoopf</Sound>
+// </AudioEvent>
