@@ -31,7 +31,7 @@ public class CloudSpawner : MonoBehaviour
     // Subroutine that handles Cloud spawning based on delays set
     private IEnumerator SpawnCloudRoutine()
     {
-        while (!FindFirstObjectByType<GameManager>().gameOver)
+        while (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
         {
             SpawnCloud();
             float delay = Random.Range(minSpawnInterval, maxSpawnInterval);

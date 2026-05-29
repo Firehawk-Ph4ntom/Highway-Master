@@ -7,13 +7,15 @@ public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI scoreText;
     private int score = 0;
-    public bool gameOver = false;
+    public bool gameStarted = false;
+    public bool gameOver  = false;
     public float gameOverDelay = 3.0f;
     public float worldSpeed = 10.0f;
 
     private void Start()
     {
         score = 0;
+        gameStarted = false;
         gameOver = false;
         scoreText.text = "Score: " + score;
     }
@@ -26,7 +28,7 @@ public class GameManager : MonoBehaviour
     // Add Score and update the Score Text
     public void AddScore()
     {
-        if (!gameOver)
+        if (gameStarted && !gameOver)
         {
             score++;
             scoreText.text = "Score: " + score;

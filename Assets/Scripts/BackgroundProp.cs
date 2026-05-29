@@ -13,7 +13,7 @@ public class BackgroundProp : MonoBehaviour
     {
         // Props move downward in the scene, and are destroyed on passing the destroyY threshold
         // Similar to Obstacle.cs
-        if (!FindFirstObjectByType<GameManager>().gameOver)
+        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
         {
             transform.Translate(Vector2.down * FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime, Space.World);
 

@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (!FindFirstObjectByType<GameManager>().gameOver)
+        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
             MovePlayer();
     }
 
@@ -71,7 +71,7 @@ public class Player : MonoBehaviour
     {
         // Player can only move Left or Right
         // Play Turn Left and Right animations
-        if (!isMovingLane && !FindFirstObjectByType<GameManager>().gameOver)
+        if (FindFirstObjectByType<GameManager>().gameStarted && !isMovingLane && !FindFirstObjectByType<GameManager>().gameOver)
         {
             if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && currentLane > 0)
             {
@@ -100,7 +100,7 @@ public class Player : MonoBehaviour
         // A bit of an initial delay before the first wave starts
         yield return new WaitForSeconds(initialSpawnDelay);
 
-        while (!FindFirstObjectByType<GameManager>().gameOver)
+        while (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
         {
             SpawnWave();
             float delay = Random.Range(minSpawnInterval, maxSpawnInterval);
@@ -211,7 +211,7 @@ public class Player : MonoBehaviour
     // Collision Trigger Detection between a Player and an Obstacle
     private void OnTriggerEnter2D(Collider2D collidee)
     {
-        if (!FindFirstObjectByType<GameManager>().gameOver) {
+        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver) {
 
             string collideeTag = collidee.tag;
 

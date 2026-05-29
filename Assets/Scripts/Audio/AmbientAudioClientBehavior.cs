@@ -29,6 +29,7 @@ public class AmbientAudioClientBehavior : MonoBehaviour
     // Continuosly play Ambient Audio, unless GameOver
     private IEnumerator AmbientRoutine()
     {
+        // FindFirstObjectByType<GameManager>().gameStarted (weird to not start ambient audio unless game start, we're already in the scene!)
         while (!FindFirstObjectByType<GameManager>().gameOver)
         {
             yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));

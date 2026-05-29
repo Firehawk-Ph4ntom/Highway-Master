@@ -11,7 +11,7 @@ public class BackgroundScroller : MonoBehaviour
 
     private void Update()
     {
-        if (!FindFirstObjectByType<GameManager>().gameOver)
+        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
         {
             transform.Translate(Vector2.down * FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime, Space.World);
 
