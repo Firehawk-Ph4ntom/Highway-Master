@@ -11,12 +11,9 @@ public class AudioManager : MonoBehaviour
         public AudioEventData audioEvent;
     }
 
-    public static AudioManager Instance;
-    
     // Create Dictionaries to search for key value items needed for limit count and tracking Owner Objects for looping events
     private readonly Dictionary<AudioEventData, int> activeCounts = new();
     private readonly Dictionary<GameObject, List<OwnedLoopData>> ownedLoops = new();
-
     public static AudioManager Instance;
 
     // Since AudioManager is a singleton Object and must persist across all scenes, we use Awake() and DontDestroyOnLoad()
