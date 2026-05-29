@@ -40,11 +40,6 @@ public class AmbientStreamPlayer : MonoBehaviour
         StartCoroutine(FadeInRoutine());
     }
 
-    private void Update()
-    {
-
-    }
-
     // Fade ambience in
     private IEnumerator FadeInRoutine()
     {   

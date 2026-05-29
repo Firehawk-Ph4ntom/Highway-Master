@@ -20,11 +20,6 @@ public class BackgroundPropManager : MonoBehaviour
         StartCoroutine(SpawnRoutine());
     }
 
-    private void Update()
-    {
-
-    }
-
     // Subroutine that handles Prop spawning based on a random delay
     private IEnumerator SpawnRoutine()
     {

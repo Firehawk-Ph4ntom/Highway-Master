@@ -4,11 +4,6 @@ public class BackgroundProp : MonoBehaviour
 {
     public float destroyY;
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         // Props move downward in the scene, and are destroyed on passing the destroyY threshold

@@ -20,11 +20,6 @@ public class GameManager : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    private void Update()
-    {
-
-    }
-
     // Add Score and update the Score Text
     public void AddScore()
     {

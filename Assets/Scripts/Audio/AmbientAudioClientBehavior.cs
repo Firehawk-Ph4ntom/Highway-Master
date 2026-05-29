@@ -21,11 +21,6 @@ public class AmbientAudioClientBehavior : MonoBehaviour
         StartCoroutine(AmbientRoutine());
     }
 
-    private void Update()
-    {
-
-    }
-
     // Continuosly play Ambient Audio, unless GameOver
     private IEnumerator AmbientRoutine()
     {

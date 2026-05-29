@@ -28,9 +28,4 @@ public class GameOverMenu : MonoBehaviour
         else
             GameOver.sprite = GameOver_Crash;
     }
-
-    private void Update()
-    {
-
-    }
 }

@@ -4,11 +4,6 @@ public class BackgroundScroller : MonoBehaviour
 {
     public float startY, resetY;
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
