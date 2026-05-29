@@ -21,10 +21,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ca7fc2295016220468f860d85d417bec, type: 3}
   - {fileID: 8300000, guid: 1a50365883a39584c818a5b87ae11cc1, type: 3}
   - {fileID: 8300000, guid: 2b2dec3e506dc2d4787ff1ba940fbbf2, type: 3}
-  volume: 0.7
+  volume: 0.4
   volumeShift: {x: -0.15, y: 0}
   pitchShift: {x: -0.1, y: 0.05}
-  delay: {x: 0, y: 3}
+  delay: {x: 0, y: 2}
   loop: 0
   limit: 3
   mixerGroup: {fileID: 3085316346858550708, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}

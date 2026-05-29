@@ -30,6 +30,7 @@ MonoBehaviour:
   volume: 0.7
   volumeShift: {x: -0.15, y: 0}
   pitchShift: {x: -0.1, y: 0.05}
-  delay: {x: 0, y: 3}
+  delay: {x: 0, y: 2}
+  loop: 0
   limit: 3
   mixerGroup: {fileID: 3085316346858550708, guid: 91db6d01b71f07143b182d2e6ef54fbf, type: 2}
