@@ -7,9 +7,6 @@ public class CloudSpawner : MonoBehaviour
 
     public float minSpawnInterval = 1.0f, maxSpawnInterval = 3.0f;
     public float spawnOffset = 2.0f, destroyOffset = 2.0f;
-    public float cloudSpeed = 2.0f;
-
-    public Vector2 moveDirection = new Vector2(-0.25f, -1.0f);
 
     private float spawnY, destroyY, minX, maxX;
 
@@ -55,8 +52,6 @@ public class CloudSpawner : MonoBehaviour
         Cloud cloud = cloudObject.GetComponent<Cloud>();
 
         // referenced in Cloud script
-        cloud.moveDirection = moveDirection;
-        cloud.moveSpeed = cloudSpeed;
         cloud.destroyY = destroyY;
     }
 }

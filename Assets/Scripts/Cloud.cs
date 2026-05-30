@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Cloud : MonoBehaviour
 {
-    public float moveSpeed = 1.5f;
-    public Vector2 moveDirection = new Vector2(-0.3f, -1.0f);
+    public float moveSpeed = 2.0f;
+    public Vector2 moveDirection = new Vector2(-0.25f, -1.0f);
     public float destroyY;
 
     private void Update()

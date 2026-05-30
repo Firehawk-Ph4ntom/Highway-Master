@@ -4,11 +4,13 @@ public class BackgroundScroller : MonoBehaviour
 {
     public float startY, resetY;
 
+    // Background moves downwards in the scene
+    // Reset position back to startY once resetY threshold has passed
     private void Update()
     {
         if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
         {
-            transform.Translate(Vector2.down * FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime, Space.World);
+            transform.Translate(new Vector2(0, -FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime));
 
             if (transform.position.y <= resetY)
             {

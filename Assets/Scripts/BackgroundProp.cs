@@ -10,7 +10,7 @@ public class BackgroundProp : MonoBehaviour
         // Similar to Obstacle.cs
         if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
         {
-            transform.Translate(Vector2.down * FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime, Space.World);
+            transform.Translate(new Vector2(0, -FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime));
 
             if (transform.position.y < destroyY)
             {

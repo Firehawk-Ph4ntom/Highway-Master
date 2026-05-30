@@ -173,8 +173,6 @@ MonoBehaviour:
   maxSpawnInterval: 3
   spawnOffset: 2
   destroyOffset: 2
-  cloudSpeed: 2
-  moveDirection: {x: -0.25, y: -1}
 --- !u!1 &190564387
 GameObject:
   m_ObjectHideFlags: 0

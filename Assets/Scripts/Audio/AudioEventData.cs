@@ -10,9 +10,9 @@ public class AudioEventData : ScriptableObject
     [Range(0f, 1f)]
     public float volume = 1.0f;
 
-    public Vector2 volumeShift = Vector2.zero;
-    public Vector2 pitchShift = Vector2.zero;
-    public Vector2 delay = Vector2.zero;
+    public Vector2 volumeShift = new Vector2(0, 0);
+    public Vector2 pitchShift = new Vector2(0, 0);
+    public Vector2 delay = new Vector2(0, 0);
 
     public bool loop = false;
 

@@ -104,6 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f01e03096e752e64fac807e1709de264, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Cloud
-  moveSpeed: 1.5
-  moveDirection: {x: -0.3, y: -1}
+  moveSpeed: 2
+  moveDirection: {x: -0.25, y: -1}
   destroyY: 0
