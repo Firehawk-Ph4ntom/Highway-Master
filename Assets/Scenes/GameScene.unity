@@ -1353,6 +1353,7 @@ MonoBehaviour:
   gameOver: 0
   gameOverDelay: 5
   worldSpeed: 10
+  scoreSound: {fileID: 11400000, guid: 26ed46095a7eacc40886e60091aead23, type: 2}
 --- !u!4 &1413964300
 Transform:
   m_ObjectHideFlags: 0

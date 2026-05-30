@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public bool gameOver  = false;
     public float gameOverDelay = 3.0f;
     public float worldSpeed = 10.0f;
+    public AudioEventData scoreSound;
 
     private void Start()
     {
@@ -27,6 +28,7 @@ public class GameManager : MonoBehaviour
         {
             score++;
             scoreText.text = "Score: " + score;
+            AudioManager.Instance.Play(scoreSound);
         }
     }
 
