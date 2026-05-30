@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 // Serializable class to hold the Obstacle Prefab data
 [System.Serializable]
@@ -37,8 +38,20 @@ public class Player : MonoBehaviour
     private Coroutine spawnCoroutine;
 
     public CrashSoundData[] crashSounds;
+    // Create a Dictionary to map Obstacle Tags to their corresponding Crash MultiSound Data
+    private readonly Dictionary<string, MultiSoundData> crashSoundMap = new();
     
     private Animator animator;
+
+    private void Awake()
+    {
+        // Populate the Dictionary
+        for (int i = 0; i < crashSounds.Length; i++)
+        {
+            CrashSoundData data = crashSounds[i];
+            crashSoundMap[data.obstacleTag] = data.sound;
+        }
+    }
 
     private void Start()
     {
@@ -221,7 +234,7 @@ public class Player : MonoBehaviour
             string collideeTag = collidee.tag;
 
             // Each Obstacle generates a different Crash Type, 
-            // which is then saved for different Game Over Menu UI Screens
+            // which is then saved for different Game Over Menu UI Screens and different crash Audio
             if (collideeTag == "HoleObstacle")
             {
                 PlayerPrefs.SetString("CrashType", "Hole");
@@ -239,21 +252,18 @@ public class Player : MonoBehaviour
             AudioManager.Instance.Play(sound);
 
             // Then, stop Obstacle Spawning subroutine and trigger Game Over in the Game Manager
-            // The Game Over Screen will then change depending on the saved Player Prefs enum
+            // The Game Over Screen will then change depending on the saved Crash Type
             StopCoroutine(spawnCoroutine);
             FindFirstObjectByType<GameManager>().GameOver();
         }
     }
 
+    // Get the Multisound Data attached to Object/Obstacle Tag and return it back
     private MultiSoundData GetCrashSound(string obstacleTag)
     {
-        for (int i = 0; i < crashSounds.Length; i++)
-        {
-            CrashSoundData data = crashSounds[i];
+        if (crashSoundMap.TryGetValue(obstacleTag, out MultiSoundData sound))
+            return sound;
 
-            if (data.obstacleTag == obstacleTag)
-                return data.sound;
-        }
         return null;
     }
 }
