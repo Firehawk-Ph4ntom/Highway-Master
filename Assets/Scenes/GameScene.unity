@@ -584,7 +584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -800.0001, y: 490}
+  m_AnchoredPosition: {x: -800, y: 540}
   m_SizeDelta: {x: 320, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &366317037
@@ -1347,10 +1347,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   scoreText: {fileID: 366317037}
+  worldSpeed: 10
   gameStarted: 0
   gameOver: 0
   gameOverDelay: 5
-  worldSpeed: 10
   scoreSound: {fileID: 11400000, guid: 26ed46095a7eacc40886e60091aead23, type: 2}
 --- !u!4 &1413964300
 Transform:
