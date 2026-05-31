@@ -5,13 +5,30 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameManager Instance;
+
     public TextMeshProUGUI scoreText;
+
     private int score = 0;
+    public float worldSpeed = 10.0f;
+    
     public bool gameStarted = false;
     public bool gameOver  = false;
     public float gameOverDelay = 3.0f;
-    public float worldSpeed = 10.0f;
+    
     public AudioEventData scoreSound;
+
+    private void Awake()
+    {
+        // Make sure only ONE GameManager exists at any given moment
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -47,7 +64,7 @@ public class GameManager : MonoBehaviour
     // all ambient audio for a smoother transition to the Game Over Scene
     private IEnumerator GameOverRoutine()
     {
-        FindFirstObjectByType<AmbientStreamPlayer>().FadeOut();
+        AmbientStreamPlayer.Instance.FadeOut();
         yield return new WaitForSeconds(gameOverDelay);
         SceneManager.LoadScene("GameOverScene");
     }

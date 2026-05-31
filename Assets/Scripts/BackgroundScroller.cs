@@ -8,9 +8,9 @@ public class BackgroundScroller : MonoBehaviour
     // Reset position back to startY once resetY threshold has passed
     private void Update()
     {
-        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
+        if (GameManager.Instance.gameStarted && !GameManager.Instance.gameOver)
         {
-            transform.Translate(new Vector2(0, -FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime));
+            transform.Translate(new Vector2(0, -GameManager.Instance.worldSpeed * Time.deltaTime));
 
             if (transform.position.y <= resetY)
             {

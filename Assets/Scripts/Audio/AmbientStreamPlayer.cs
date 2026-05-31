@@ -4,18 +4,24 @@ using System.Collections;
 
 public class AmbientStreamPlayer : MonoBehaviour
 {
+    public static AmbientStreamPlayer Instance;
+
     public AudioClip ambientClip;
 
     [Range(0f, 1f)]
     public float streamVolume;
     public bool randomStart = true;
-    public float fadeInDuration = 3.0f;
-    public float fadeOutDuration = 1.5f;
+    public float fadeInDuration = 3.0f, fadeOutDuration = 1.5f;
 
     public AudioMixer audioMixer;
+    private AudioSource source;
+
     public string volumeParameter;
 
-    private AudioSource source;
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {

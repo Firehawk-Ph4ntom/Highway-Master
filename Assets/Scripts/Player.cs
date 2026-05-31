@@ -76,7 +76,7 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
+        if (GameManager.Instance.gameStarted && !GameManager.Instance.gameOver)
             MovePlayer();
     }
 
@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
     {
         // Player can only move Left or Right
         // Play Turn Left and Right animations
-        if (FindFirstObjectByType<GameManager>().gameStarted && !isMovingLane && !FindFirstObjectByType<GameManager>().gameOver)
+        if (GameManager.Instance.gameStarted && !isMovingLane && !GameManager.Instance.gameOver)
         {
             if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && currentLane > 0)
             {
@@ -112,13 +112,13 @@ public class Player : MonoBehaviour
     {
 
         // Make sure gameStarted is true before executing
-        while (!FindFirstObjectByType<GameManager>().gameStarted)
+        while (!GameManager.Instance.gameStarted)
             yield return null;
 
         // A bit of an initial delay before the first wave starts
         yield return new WaitForSeconds(initialSpawnDelay);
 
-        while (!FindFirstObjectByType<GameManager>().gameOver)
+        while (!GameManager.Instance.gameOver)
         {
             SpawnWave();
             float delay = Random.Range(minSpawnInterval, maxSpawnInterval);
@@ -229,7 +229,7 @@ public class Player : MonoBehaviour
     // Collision Trigger Detection between a Player and an Obstacle
     private void OnTriggerEnter2D(Collider2D collidee)
     {
-        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver) {
+        if (GameManager.Instance.gameStarted && !GameManager.Instance.gameOver) {
 
             string collideeTag = collidee.tag;
 
@@ -254,7 +254,7 @@ public class Player : MonoBehaviour
             // Then, stop Obstacle Spawning subroutine and trigger Game Over in the Game Manager
             // The Game Over Screen will then change depending on the saved Crash Type
             StopCoroutine(spawnCoroutine);
-            FindFirstObjectByType<GameManager>().GameOver();
+            GameManager.Instance.GameOver();
         }
     }
 

@@ -13,8 +13,7 @@ public class AmbientAudioClientBehavior : MonoBehaviour
 {
     public AmbientAudioEventWeightData[] ambientAudioEventWeightData;
 
-    public float minDelay;
-    public float maxDelay;
+    public float minDelay, maxDelay;
 
     private void Start()
     {
@@ -24,8 +23,8 @@ public class AmbientAudioClientBehavior : MonoBehaviour
     // Continuosly play Ambient Audio, unless GameOver
     private IEnumerator AmbientRoutine()
     {
-        // FindFirstObjectByType<GameManager>().gameStarted (weird to not start ambient audio unless game start, we're already in the scene!)
-        while (!FindFirstObjectByType<GameManager>().gameOver)
+        // GameManager.Instance.gameStarted (weird to not start ambient audio unless game start, we're already in the scene!)
+        while (!GameManager.Instance.gameOver)
         {
             yield return new WaitForSeconds(Random.Range(minDelay, maxDelay));
 

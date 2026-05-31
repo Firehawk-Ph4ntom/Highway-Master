@@ -8,7 +8,8 @@ public class CloudSpawner : MonoBehaviour
     public float minSpawnInterval = 1.0f, maxSpawnInterval = 3.0f;
     public float spawnOffset = 2.0f, destroyOffset = 2.0f;
 
-    private float spawnY, destroyY, minX, maxX;
+    private float spawnY, destroyY;
+    private float minX, maxX;
 
     private void Start()
     {
@@ -29,10 +30,10 @@ public class CloudSpawner : MonoBehaviour
     private IEnumerator SpawnCloudRoutine()
     {
         // Make sure gameStarted is true before executing
-        while (!FindFirstObjectByType<GameManager>().gameStarted)
+        while (!GameManager.Instance.gameStarted)
             yield return null;
 
-        while (!FindFirstObjectByType<GameManager>().gameOver)
+        while (!GameManager.Instance.gameOver)
         {
             SpawnCloud();
             float delay = Random.Range(minSpawnInterval, maxSpawnInterval);

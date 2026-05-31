@@ -24,10 +24,10 @@ public class BackgroundPropManager : MonoBehaviour
     private IEnumerator SpawnRoutine()
     {
         // Make sure gameStarted is true before executing
-        while (!FindFirstObjectByType<GameManager>().gameStarted)
+        while (!GameManager.Instance.gameStarted)
             yield return null;
         
-        while (!FindFirstObjectByType<GameManager>().gameOver)
+        while (!GameManager.Instance.gameOver)
         {
             SpawnProp();
             float delay = Random.Range(minSpawnDelay, maxSpawnDelay);

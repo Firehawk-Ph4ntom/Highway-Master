@@ -9,7 +9,7 @@ public class Cloud : MonoBehaviour
     private void Update()
     {
         // Clouds move downward in the scene, and are destroyed on passing the destroyY threshold
-        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
+        if (GameManager.Instance.gameStarted && !GameManager.Instance.gameOver)
         {
             transform.Translate(moveDirection.normalized * moveSpeed * Time.deltaTime, Space.World);
 

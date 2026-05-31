@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
+    public static AudioManager Instance;
+
     // Doesn't need to be serialized
     private class OwnedLoopData
     {
@@ -14,7 +16,6 @@ public class AudioManager : MonoBehaviour
     // Create Dictionaries to search for key value items needed for limit count and tracking Owner Objects for looping events
     private readonly Dictionary<AudioEventData, int> activeCounts = new();
     private readonly Dictionary<GameObject, List<OwnedLoopData>> ownedLoops = new();
-    public static AudioManager Instance;
 
     // Since AudioManager is a singleton Object and must persist across all scenes, we use Awake() and DontDestroyOnLoad()
     private void Awake()

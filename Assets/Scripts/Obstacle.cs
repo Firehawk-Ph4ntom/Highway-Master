@@ -16,13 +16,13 @@ public class Obstacle : MonoBehaviour
     private void Update()
     {
         // Obstacles move downward in the scene, and are destroyed on passing the destroyY threshold
-        if (FindFirstObjectByType<GameManager>().gameStarted && !FindFirstObjectByType<GameManager>().gameOver)
+        if (GameManager.Instance.gameStarted && !GameManager.Instance.gameOver)
         {
-            transform.Translate(new Vector2(0, -FindFirstObjectByType<GameManager>().worldSpeed * Time.deltaTime));
+            transform.Translate(new Vector2(0, -GameManager.Instance.worldSpeed * Time.deltaTime));
 
             if (transform.position.y < destroyY)
             {
-                FindFirstObjectByType<GameManager>().AddScore();
+                GameManager.Instance.AddScore();
                 Destroy(gameObject);
             }
         }

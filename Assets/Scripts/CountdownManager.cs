@@ -41,6 +41,6 @@ public class CountdownManager : MonoBehaviour
         // Disable the text
         countdownText.gameObject.SetActive(false);
         // Start!
-        FindFirstObjectByType<GameManager>().gameStarted = true;
+        GameManager.Instance.gameStarted = true;
     }
 }
